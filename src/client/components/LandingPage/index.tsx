@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../shared/Header/Header';
 
 const LandingPage = () => {
-	return (
+    return (
 		<div>
 			<Header />
 		</div>
