@@ -6,7 +6,7 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
-
+import DropDown from '../Dropdown/Dropdown';
 
 const Header = () => {
 	return (
@@ -14,11 +14,12 @@ const Header = () => {
 			<Image
 				src={Logo}
 				alt='Logo'
+				className='w-28 h-40'
 			/>
-			<div className='flex flex-col items-center justify-end space-y-7'>
-				<div className='flex flex-row items-center justify-end font-bold space-x-48'>
+			<div className='flex flex-col items-center justify-end space-y-7 w-full'>
+				<div className='flex items-center justify-end font-bold w-full space-x-12'>
 					<SearchInput />
-					<div className='flex  items-center justify-center text-black space-x-12'>
+					<div className='flex  items-center justify-center text-black space-x-5'>
 						<Link
 							href='#'
 							className='flex items-center justify-center space-x-3'>
@@ -34,6 +35,9 @@ const Header = () => {
 						<div className='flex items-center justify-center space-x-3'>
 							<Heart />
 							<p>WishList</p>
+						</div>
+						<div className='flex items-center justify-center space-x-3'>
+							<DropDown />
 						</div>
 					</div>
 				</div>
