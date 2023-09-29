@@ -1,12 +1,10 @@
 import { Carousel } from '@heathmont/moon-core-tw';
-// import LandScaleImage from '../../LandScaleImage/LandScaleImage';
 import landScaleImage from './../../../../../assets/land2.png';
 import landScaleImage2 from './../../../../../assets/ban.png';
-
 import Image from 'next/image';
 
 const CarouselContainer = () => {
-	const CarouelImages = [
+	const CarouselImages = [
 		<Image
 			key='image-key'
 			src={landScaleImage2}
@@ -22,9 +20,10 @@ const CarouselContainer = () => {
 	return (
 		<Carousel
 			autoSlideDelay={5000}
+			scrollTo={1}
 			step={1}>
 			<Carousel.Reel>
-				{CarouelImages?.map((value, index) => (
+				{CarouselImages?.map((value, index) => (
 					<Carousel.Item
 						key={index}
 						className='w-full h-[450px]'>

@@ -18,8 +18,8 @@ const Location = () => {
 				alt='pointer'
 				className='-mt-3'
 			/>
-			<Button className='h-16 w-52 shadow-xl text-3xl rounded-xl bg-[#8F1616] text-white -mt-6'>
-				Check Store
+			<Button className='h-16 w-52 shadow-xl rounded-xl bg-[#8F1616] text-white -mt-6'>
+				<p className='text-white text-2xl'>Check Store</p>
 			</Button>
 		</div>
 	);

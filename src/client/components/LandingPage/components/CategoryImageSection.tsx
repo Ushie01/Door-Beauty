@@ -18,7 +18,7 @@ const CategoryImageSection = () => {
 							className='h-52 w-52 p-2'
 						/>
 
-						<div className='absolute bg-black h-52 w-52 -mt-52 opacity-10'></div>
+						<div className='absolute bg-black h-52 w-52 -mt-52 opacity-10 '></div>
 						<p className='absolute text-4xl font-bold -mt-16 p-4 '>
 							DB <span className='text-2xl font-bold'>{item.name}</span>
 						</p>

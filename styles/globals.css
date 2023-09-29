@@ -6,6 +6,26 @@
   outline: none;
 }
 
+/* Card.module.css */
+.cardContainer {
+  /* your styles for the card container */
+}
+
+.heartIcon {
+  /* your styles for the heart icon */
+}
+
+.buttonContainer {
+  position: relative;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.transitionButton {
+  transform: translateY(0%);
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
