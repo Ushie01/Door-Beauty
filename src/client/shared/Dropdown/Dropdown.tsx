@@ -1,60 +1,47 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
-import Image, { StaticImageData } from 'next/image';
-import USAImage from './../../../assets/us.png';
-import SpainImage from './../../../assets/spain.png';
 
-type People = {
-	name: string;
-	flag: StaticImageData; // Update the flag property type
+type TitleProps = {
+	title: string;
+	arrayTitle: { name: string }[];
+	setLink: Dispatch<SetStateAction<string | []>>;
 };
 
-const people: People[] = [
-	{ name: 'English', flag: USAImage },
-	{ name: 'Spain', flag: SpainImage },
-];
+const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
+	const [option, setOption] = useState<{ name: string } | null>(null);
 
-const DropDown = () => {
-	const [option, setOption] = useState<People | null>(null);
+	const handleOptionSelect = (selectedLink: { name: string }) => {
+		setOption(selectedLink);
+		setLink(selectedLink.name);
+	};
 
 	return (
-		<div className='flex w-full items-center h-12 border rounded'>
+		<div className='flex items-center h-6 text-black'>
 			<Dropdown
 				value={option}
 				onChange={setOption}>
 				{({ open }) => (
 					<>
-						<div className='flex items-center justify-center '>
-							<Image
-								src={option ? option?.flag : people[0].flag}
-								alt='flag'
-								className='flex flex-row h-5 w-10 ml-2'
-							/>
-							<Dropdown.InsetSelect
-								open={open}
-								placeholder='English'>
-								{option?.name}
-							</Dropdown.InsetSelect>
-						</div>
+						<Dropdown.InsetSelect
+							open={open}
+							placeholder={title}>
+							{option?.name}
+						</Dropdown.InsetSelect>
 
-						<Dropdown.Options className='w-12 bg-white border'>
-							{people.map((person, index) => (
+						<Dropdown.Options className='w-6 rounded-md border bg-white'>
+							{arrayTitle?.map((value, index) => (
 								<Dropdown.Option
-									value={person}
+									value={{ name: value.name }}
 									key={index}>
 									{({ selected, active }) => (
-                                        <MenuItem
+										<MenuItem
 											isActive={active}
-											isSelected={selected}>
-											<Image
-												src={person.flag}
-												alt='flag'
-												className='h-5 w-10'
-											/>
-											<MenuItem.Title>{person.name}</MenuItem.Title>
+											isSelected={selected}
+											onClick={() => handleOptionSelect(value)}>
+											<MenuItem.Title>{value.name}</MenuItem.Title>
 											<MenuItem.Radio
-												className=' bg-gray-200'
 												isSelected={selected}
+												className={selected ? 'bg-yellow-500' : 'bg-gray-200'}
 											/>
 										</MenuItem>
 									)}
