@@ -6,7 +6,7 @@ export const DATA: { id: string, name: string; data?: { name: string }[] }[] = [
   {
     id: '3', name: 'CATEGORIES',
     data: [
-      { name: 'Wade Cooper' },
+      { name: 'CATEGORIES' },
       { name: 'Arlene Mccoy' },
       { name: 'Devon Webb' },
       { name: 'Tom Cook' },
@@ -19,7 +19,7 @@ export const DATA: { id: string, name: string; data?: { name: string }[] }[] = [
   {
     id: '6', name: 'CONTACT US',
     data: [
-      { name: 'Wade Cooper' },
+      { name: 'CONTACT US' },
       { name: 'Arlene Mccoy' },
       { name: 'Devon Webb' },
       { name: 'Tom Cook' },

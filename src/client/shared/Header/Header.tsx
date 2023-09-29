@@ -7,9 +7,8 @@ import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
 import FlagDropDown from '../Dropdown/FlagDropdown';
-import DropDown from '../Dropdown/DropDown';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
-// import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
+
 
 const Header = () => {
 	return (
@@ -25,21 +24,21 @@ const Header = () => {
 					<div className='flex  items-center justify-center text-black space-x-5'>
 						<Link
 							href='#'
-							className='flex items-center justify-center space-x-3'>
+							className='flex items-center justify-center space-x-2'>
 							<Avatar />
 							<p>Account</p>
 						</Link>
 						<Link
-							href=''
-							className='flex items-center justify-center space-x-3'>
+							href='#'
+							className='flex items-center justify-center space-x-2'>
 							<Cart />
 							<p>Cart</p>
 						</Link>
-						<div className='flex items-center justify-center space-x-3'>
+						<div className='flex items-center justify-center space-x-2'>
 							<Heart />
 							<p>WishList</p>
 						</div>
-						<div className='flex items-center justify-center space-x-3'>
+						<div className='flex items-center justify-center space-x-2'>
 							<FlagDropDown />
 						</div>
 					</div>
