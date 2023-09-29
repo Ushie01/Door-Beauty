@@ -15,7 +15,9 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       spacing:{
-        'lm': '38rem'
+        'lm': '38rem',
+        'sp': '35rem',
+        '50rem': '50rem'
       },
       fontFamily:{
         'monts': ['Montserrat', 'sans-serif'],

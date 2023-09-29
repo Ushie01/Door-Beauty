@@ -8,10 +8,10 @@ interface CardProps {
 
 const Salescard: React.FC<CardProps> = ({ title, content, percent }) => {
   return (
-    <div className=" bg-white mt-4 w-60 h-36 p-2 rounded-lg flex flex-col space-y-4 ">
+    <div className=" bg-white mt-4 w-60 h-96 p-2 rounded-lg flex flex-col space-y-4 ">
       <h2 className=" font-bold uppercase text-2xl ">{title}</h2>
       <p className="font-semibold text-orange-400 text-2xl">{content}</p>
-      <div className="">
+      <div className=" bg-blue-500 flex justify-center items-center h-36 w-36 rounded-full ">
         <h2 className=" font-semibold text-lg">{percent}</h2>
       </div>
     </div>

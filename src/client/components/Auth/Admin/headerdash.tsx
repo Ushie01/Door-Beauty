@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Headerdash = () => {
   return (
     <div>
-      <div className=" bg-orange-400 h-28 w-full flex">
+      <div className=" bg-orange-400 h-28 w-full flex fixed z-50 ">
         <div className=" pt-6">
           <Image src="/namelogo.png" alt="logo" width={400} height={300} />
         </div>
@@ -26,6 +27,10 @@ const Headerdash = () => {
           />
         </div>
         <h5 className="ml-4 pt-9">Hi, Lizzie Drummond</h5>
+        <section>
+          <Link href='/Admin/viewprofile'><h3>profile</h3></Link>
+      
+      </section>
       </div>
     </div>
   );

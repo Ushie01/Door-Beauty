@@ -3,9 +3,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className=" w-56 text-sm font-semibold font-mont ">
-        <ul className=" bg-orange-50 flex flex-col space-y-5 pt-4">
+      <nav className="fixed z-40 h-full bg-blue-200 pt-28 ">
+        <ul className=" bg-orange-50 flex flex-col pt-3 space-y-5 pt-6d overflow-y-auto h-sp w-60 text-sm font-semibold font-mont ">
           <Link href="/Admin">
             <li className="flex space-x-2">
               <Image
@@ -120,7 +119,6 @@ const Navbar = () => {
           <hr className=" border border-orange-500"></hr>
         </ul>
       </nav>
-    </div>
   );
 };
 
