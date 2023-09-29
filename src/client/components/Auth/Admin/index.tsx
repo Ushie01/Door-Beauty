@@ -25,7 +25,7 @@ const Admin = () => {
                 <Card title="Total Drivers" content="13" percent="100%" />
               </div>
               <div>
-                <Card title="Total Commision" content="$400" percent="100%" />
+                <Card title="Total Commision" content="$500" percent="100%" />
               </div>
             </section>
           </div>
