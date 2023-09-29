@@ -1,5 +1,5 @@
 import { Carousel } from '@heathmont/moon-core-tw';
-import LandScaleImage from '../../LandScaleImage/LandScaleImage';
+// import LandScaleImage from '../../LandScaleImage/LandScaleImage';
 import landScaleImage from './../../../../../assets/land2.png';
 import landScaleImage2 from './../../../../../assets/ban.png';
 
