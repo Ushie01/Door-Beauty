@@ -32,7 +32,8 @@ const CosmeticsSection = () => {
 					alt='firstImage'
 					className='w-1/2 pl-2'
 				/>
-			</div>
+      </div>
+      <hr className='mt-20 w-full'/>
 		</div>
 	);
 };

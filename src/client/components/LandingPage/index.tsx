@@ -7,6 +7,7 @@ import Location from './components/Location';
 import CarouselItem from './components/Carousel/ProductCarousel';
 import CosmeticsSection from './components/CosmeticsSection/CosmeticsSection';
 import DoorBeautyLinks from './components/DoorBeautyLinks/DoorBeautyLinks';
+import Footer from '../../shared/Footer';
 
 const LandingPage = () => {
 	return (
@@ -19,6 +20,8 @@ const LandingPage = () => {
 			<Location />
 			<CosmeticsSection />
 			<DoorBeautyLinks />
+			<Footer />
+			
 		</div>
 	);
 };

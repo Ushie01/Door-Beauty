@@ -16,10 +16,11 @@ const Card = ({ title, description, icon }: Props) => {
 				<p className='text-xl font-bold'>{title}</p>
 				<p>
 					{description}
-					<Button className='bg-gray-200 rounded-xl p-1 mt-4'>
+					<Button className='bg-orange-400 rounded-xl p-1 mt-4'>
 						<ArrowsRight
 							height={34}
-							width={34}
+                            width={34}
+                            color='white'
 						/>
 					</Button>
 				</p>

@@ -7,7 +7,7 @@ const DoorBeautyLinks = () => {
 		<div className='flex flex-row items-start justify-between p-12'>
 			<div className='flex flex-col w-2/3'>
 				<div className='flex'>
-					<div className='bg-yellow-500 h-5 w-1'></div>
+					<div className='bg-orange-400 h-5 w-1'></div>
 					<div className='flex items-center justify-center bg-gray-200 h-5 '>
 						<p className='text-black p-1 text-sm text-center '>What we do</p>
 					</div>

@@ -42,7 +42,7 @@ const ToggleNavbar = () => {
 							</div>
 							<hr
 								className={`h-1 w-full ${
-									link === value.name ? 'bg-black' : ''
+									link === value.name ? 'bg-orange-500' : ''
 								}`}
 							/>
 						</div>

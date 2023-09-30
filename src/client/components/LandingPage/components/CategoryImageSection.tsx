@@ -10,7 +10,7 @@ const CategoryImageSection = () => {
 				<>
 					<Link
 						href='#'
-						className='relative border rounded text-yellow-500 hover:text-white'>
+						className='relative border rounded text-orange-400 hover:text-white'>
 						<Image
 							src={item.image}
 							alt='item'

@@ -33,12 +33,12 @@ const Card = ({photo, name, type, price, color}: DataProps) => {
                     <p className='text-black mt-11'>{name}</p>
                     <p className='text-gray-500'>{type}</p>
 					<div className='flex items-center justify-between'>
-                        <p className='text-yellow-500 text-2xl'>{price}</p>
+                        <p className='text-orange-400 text-2xl'>{price}</p>
                         <p>{color}</p>
 					</div>
 				</div>
 				<div className='p-3 w-full'>
-					<Button className='h-11 w-full rounded-3xl bg-black font-bold text-white'>
+					<Button className='h-11 w-full rounded-3xl bg-orange-400 font-bold text-white'>
 						Add to Bag
 					</Button>
 				</div>
