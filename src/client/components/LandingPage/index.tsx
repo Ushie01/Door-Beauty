@@ -4,7 +4,8 @@ import CarouselContainer from './components/Carousel/LandScaleImage';
 import CategoryImageSection from './components/CategoryImageSection';
 import SeasonSection from './components/SeasonSection';
 import Location from './components/Location';
-import CarouselItem from './components/Carousel/CarouselItem';
+import CarouselItem from './components/Carousel/ProductCarousel';
+import CosmeticsSection from './components/CosmeticsSection/CosmeticsSection';
 
 const LandingPage = () => {
 	return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
 			<SeasonSection />
 			<CarouselItem />
 			<Location />
+			<CosmeticsSection/>
 		</div>
 	);
 };

@@ -8,7 +8,7 @@ import LocationInput from './Input/LocationInput';
 
 const Location = () => {
 	return (
-		<div className='flex flex-col items-center justify-center h-min bg-gray-800'>
+		<div className='flex flex-col items-center justify-center h-min bg-gray-800 pb-8'>
 			<div className='flex items-center justify-center flex-col pl-12 -mt-20 font-extrabold bg-gradient-to-r p-5'>
 				<h1 className='font-extrabold text-transparent text-9xl mt-28 bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-800'>
 					Discover Us{' '}
@@ -31,9 +31,6 @@ const Location = () => {
 			<div className='-mt-12'>
 				<LocationInput />
 			</div>
-			{/* <Button className='h-16 w-96 shadow-3xl rounded-xl bg-[#8F1616] text-white -mt-6'>
-				<p className='text-white text-2xl'>Check Store</p>
-			</Button> */}
 		</div>
 	);
 };

@@ -22,7 +22,7 @@ const ToggleNavbar = () => {
 	}, []);
 
 	return (
-		<ul className='flex items-center justify-end text-black space-x-24 font-bold'>
+		<ul className='flex items-end justify-end text-black ml-44 space-x-12 font-bold'>
 			{DATA.map((value) => (
 				<React.Fragment key={value.id}>
 					<Link
