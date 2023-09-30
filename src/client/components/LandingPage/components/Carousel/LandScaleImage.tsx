@@ -3,7 +3,7 @@ import landScaleImage from './../../../../../assets/land2.png';
 import landScaleImage2 from './../../../../../assets/ban.png';
 import Image from 'next/image';
 
-const CarouselContainer = () => {
+const LandScaleImage = () => {
 	const CarouselImages = [
 		<Image
 			key='image-key'
@@ -35,4 +35,4 @@ const CarouselContainer = () => {
 	);
 };
 
-export default CarouselContainer;
+export default LandScaleImage;

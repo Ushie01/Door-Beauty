@@ -1,16 +1,14 @@
-import React from 'react'
-import Search from '../../Svg/SearchIcon';
-
+import React from 'react';
+import Search from '../../../Svg/SearchIcon';
+import { Input } from './Input';
 
 const SearchInput = () => {
-  return (
+	return (
 		<div className='relative w-[500px] border'>
-			<input
-				type='text'
-				name='price'
-				id='price'
-				className='block w-full py-1.5 pl-7 font-bold pr-20 text-gray-900 h-12 placeholder:text-gray-400 sm:text-sm'
-				placeholder='Search Project...'
+			<Input
+				textColor='text-gray-900'
+				bgColor='bg-white'
+				placeHolder='Search Product...'
 			/>
 			<div className='absolute inset-y-0 right-0 flex items-center space-x-3 mr-5'>
 				<select
@@ -23,11 +21,11 @@ const SearchInput = () => {
 				</select>
 				<p className='text-black'>|</p>
 				<button>
-					<Search />
+					<Search iconColor='black' />
 				</button>
 			</div>
 		</div>
 	);
-}
+};
 
-export default SearchInput
+export default SearchInput;

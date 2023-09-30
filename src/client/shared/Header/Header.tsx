@@ -1,14 +1,13 @@
 import React from 'react';
 import Logo from './../../../assets/logo.png';
 import Image from 'next/image';
-import SearchInput from '../../components/LandingPage/components/SearchInput';
+import SearchInput from '../../components/LandingPage/components/Input/SearchInput';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
 import FlagDropDown from '../Dropdown/FlagDropdown';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
-
 
 const Header = () => {
 	return (

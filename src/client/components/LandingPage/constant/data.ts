@@ -1,4 +1,4 @@
-import CarouselContainer from '../components/Carousel/CarouselContainer';
+import CarouselContainer from '../components/Carousel/LandScaleImage';
 import Bigen from './../../../../assets/Bigen Oz.jpg';
 import Clarol from './../../../../assets/Clarol Soy.jpg';
 import CreamBeauty from './../../../../assets/cream_beauty.jpg';

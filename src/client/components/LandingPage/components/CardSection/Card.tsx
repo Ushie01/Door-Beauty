@@ -13,7 +13,7 @@ type DataProps = {
 
 const Card = ({photo, name, type, price, color}: DataProps) => {
 	return (
-		<div className='flex flex-col h-[500px]  w-80 shadow-lg'>
+		<div className='flex flex-col h-[500px]  w-80 shadow-lg bg-white border'>
 			<div className='flex items-center justify-end w-full h-12'>
 				<Button>
 					<GenericHeart
