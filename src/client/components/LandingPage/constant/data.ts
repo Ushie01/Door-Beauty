@@ -8,6 +8,12 @@ import food from '../components/CosmeticsSection/assets/food.jpeg';
 import tytry from '../components/CosmeticsSection/assets/try.png';
 import hhh from '../components/CosmeticsSection/assets/hhh.jpg';
 import jorge from '../components/CosmeticsSection/assets/xyz.png';
+import {
+	SportSpeedway,
+	ShopBank,
+    ShopCryptoCoin,
+    ChatCommentBubbleQuestionMark
+} from '@heathmont/moon-icons-tw';
 
 
 export const ITEMS = [
@@ -94,4 +100,11 @@ export const STORE_DATA = [
     { photo: hhh, name: 'DIVINE STORE', productCount: 500 },
     { photo: jorge, name: 'JORGE STORE', productCount: 1230 },
     { photo: Tarry, name: 'TARRY STORE', productCount: 0 },
+];
+
+export const BAEUTY_DATA = [
+    { title: 'Become a Driver', description: 'Sign up today and become a driver for any of out store branch within the country of your choice.', icon: SportSpeedway },
+    { title: 'Become a Vendor', description: 'Sign up today and become a vendor and own your store, monitor your business and flow of cash.', icon: ShopBank },
+    { title: 'Discount and Savings', description: 'For a limited time, sign up for the door beauty store membership and get 20% off.', icon: ShopCryptoCoin },
+    { title: 'Looking for Something?', description: "Don't see what you're looking for? we recommand a product or store.", icon: ChatCommentBubbleQuestionMark}
 ]

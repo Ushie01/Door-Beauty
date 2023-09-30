@@ -6,6 +6,7 @@ import SeasonSection from './components/SeasonSection';
 import Location from './components/Location';
 import CarouselItem from './components/Carousel/ProductCarousel';
 import CosmeticsSection from './components/CosmeticsSection/CosmeticsSection';
+import DoorBeautyLinks from './components/DoorBeautyLinks/DoorBeautyLinks';
 
 const LandingPage = () => {
 	return (
@@ -16,7 +17,8 @@ const LandingPage = () => {
 			<SeasonSection />
 			<CarouselItem />
 			<Location />
-			<CosmeticsSection/>
+			<CosmeticsSection />
+			<DoorBeautyLinks />
 		</div>
 	);
 };

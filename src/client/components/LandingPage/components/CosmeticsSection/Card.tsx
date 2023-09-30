@@ -18,7 +18,7 @@ const Card = ({photo, name, productCount}: Props) => {
 			/>
 			<div className='flex flex-col p-2'>
                 <p className='text-2xl font-bold'>{name}</p>
-                <p className='text-red-500 text-xl'>{productCount}</p>
+                {/* <p className='text-red-500 text-xl'>{productCount}</p> */}
 			</div>
 		</div>
 	);
