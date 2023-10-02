@@ -16,12 +16,12 @@ const CarouselItem = () => {
 	};
 
 	return (
-		<div className='p-12 bg-gray-100'>
+		<div className='lg:p-12 p-4 bg-gray-100'>
 			<CustomCarousel renderCarouselItems={renderCarouselItems} />
 			<Image
 				src={subBan}
 				alt='Sub Ban'
-				className='mt-16'
+				className='mt-16 '
 			/>
 		</div>
 	);

@@ -8,27 +8,27 @@ import LocationInput from './Input/LocationInput';
 
 const Location = () => {
 	return (
-		<div className='flex flex-col items-center justify-center h-min bg-gray-800 pb-8'>
-			<div className='flex items-center justify-center flex-col pl-12 -mt-20 font-extrabold bg-gradient-to-r p-5'>
-				<h1 className='font-extrabold text-transparent text-9xl mt-28 bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-800'>
+		<div className='flex flex-col items-center justify-center bg-gray-100 lg:pb-8 pb-16'>
+			<div className='flex items-center justify-center flex-col -mt-20  bg-gradient-to-r p-5'>
+				<h1 className='font-extrabold text-transparent lg:text-9xl text-6xl mt-28 bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-800'>
 					Discover Us{' '}
 				</h1>
-				<p className='text-4xl text-[#7B5037]'>at your door step today</p>
-				<p className='text-[#7B5037]'>and reach out to your peak beauty</p>
+				<p className='lg:text-3xl text-xl text-gray-400'>at your door step today</p>
+				<p className='lg:text-3xl text-xl text-gray-400'>and reach out to your peak beauty</p>
 			</div>
 			<Image
 				src={Pointer}
 				alt='pointer'
-				className='border-white h-64 w-64 -mt-10'
+				className='border-white h-64 w-64 lg:-mt-10 -mt-16'
 			/>
-			<div className='p-6'>
+			<div className='lg:px-52 w-full'>
 				<Image
 					src={Map}
 					alt='pointer'
-					className='border-white h-[400px] w-full -mt-10 rounded-xl'
+					className='border-white lg:h-[400px] h-[200px] w-full -mt-10 lg:rounded-xl'
 				/>
 			</div>
-			<div className='-mt-12'>
+			<div className='flex items-center justify-center lg:-mt-10 -mt-10 w-full p-4'>
 				<LocationInput />
 			</div>
 		</div>

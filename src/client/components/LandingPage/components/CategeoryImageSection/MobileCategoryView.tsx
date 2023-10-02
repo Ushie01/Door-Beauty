@@ -22,7 +22,6 @@ const MobileCategoryView = () => {
 						DB  <span className='text-2xl font-bold'>{item.name}</span>
 					</p>
 				</Link>
-				// </th>
 			))}
 			<div className='flex flex-col items-center justify-center hover:bg-black h-48 w-full border rounded p-2 bg-[#8F1616]'>
 				<p className='text-6xl font-bold text-white'>SALE</p>

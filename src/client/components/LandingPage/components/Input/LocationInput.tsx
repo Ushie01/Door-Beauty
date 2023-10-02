@@ -4,16 +4,16 @@ import { Input } from './Input';
 
 const LocationInput = () => {
 	return (
-		<div className='relative w-[500px] border'>
+		<div className='relative lg:w-[500px] w-full border'>
 			<Input
-				textColor='text-white'
-				bgColor='bg-gray-800'
+				textColor='text-gray-500'
+				bgColor='bg-gray-100'
 				placeHolder='Search Store Location...'
 			/>
 			<div className='absolute inset-y-0 right-0 flex items-center space-x-3 mr-5'>
-				<p className='text-white '>|</p>
+				<p className='text-gray-500 '>|</p>
 				<button>
-					<Search iconColor='white' />
+					<Search iconColor='gray' />
 				</button>
 			</div>
 		</div>

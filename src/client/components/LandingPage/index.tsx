@@ -15,11 +15,11 @@ const LandingPage = () => {
 			<Header />
 			<CarouselContainer />
 			<CategoryImageSection />
-			{/* <SeasonSection />
+			<SeasonSection />
 			<CarouselItem />
 			<Location />
 			<CosmeticsSection />
-			<DoorBeautyLinks />
+			{/* <DoorBeautyLinks />
 			<Footer /> */}
 		</div>
 	);
