@@ -20,7 +20,7 @@ const LandingPage = () => {
 			<Location />
 			<CosmeticsSection />
 			<DoorBeautyLinks />
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

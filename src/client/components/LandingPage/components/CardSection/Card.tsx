@@ -26,7 +26,7 @@ const Card = ({photo, name, type, price, color}: DataProps) => {
 			<Image
 				src={photo}
 				alt='Bigen'
-				className='w-full bg-red-500 h-64'
+				className='w-full h-64'
 			/>
 			<div className='flex flex-col justify-end w-full -mt-20border'>
 				<div className='flex flex-col font-bold px-3 space-y-1'>

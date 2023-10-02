@@ -6,7 +6,7 @@ const LinkedinIcon = () => {
 			xmlns='http://www.w3.org/2000/svg'
 			width='35'
 			height='35'
-			color='white'
+			color='gray'
 			fill='currentColor'
 			className='bi bi-linkedin hover:text-orange-500'
 			viewBox='0 0 16 16'>
