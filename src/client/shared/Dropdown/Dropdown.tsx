@@ -1,15 +1,16 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
 
+
 type TitleProps = {
 	title: string;
 	arrayTitle: { name: string }[];
 	setLink: Dispatch<SetStateAction<string | []>>;
 };
 
+
 const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
 	const [option, setOption] = useState<{ name: string } | null>(null);
-
 	const handleOptionSelect = (selectedLink: { name: string }) => {
 		setOption(selectedLink);
 		setLink(selectedLink.name);

@@ -18,7 +18,6 @@ const CarouselItem = () => {
 	return (
 		<div className='p-12 bg-gray-100'>
 			<CustomCarousel renderCarouselItems={renderCarouselItems} />
-
 			<Image
 				src={subBan}
 				alt='Sub Ban'

@@ -4,7 +4,7 @@ import { Input } from './Input';
 
 const SearchInput = () => {
 	return (
-		<div className='relative w-[500px] border'>
+		<div className='relative lg:w-[500px] w-96 border'>
 			<Input
 				textColor='text-gray-900'
 				bgColor='bg-white'
@@ -14,13 +14,12 @@ const SearchInput = () => {
 				<select
 					id='currency'
 					name='currency'
-					className='h-full text-right borderless-input bg-transparent font-bold text-black py-0 pl-2 pr-7 sm:text-sm'>
+					className='h-full text-right borderless-input bg-transparent font-bold text-black py-0 pl-2 lg:pr-3 pr-1 sm:text-sm'>
 					<option>All Categories </option>
 					<option>CAD</option>
 					<option>EUR</option>
 				</select>
-				<p className='text-black'>|</p>
-				<button>
+				<button className='border-l-2 pl-2 '>
 					<Search iconColor='black' />
 				</button>
 			</div>

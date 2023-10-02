@@ -11,7 +11,6 @@ type Data = {
 
 const ToggleNavbar = () => {
 	const [link, setLink] = useState<string | []>('HOME');
-	console.log(link);
 
 	const handleClick = (item: Data) => {
 		setLink(item.name);
@@ -38,7 +37,7 @@ const ToggleNavbar = () => {
 												setLink={setLink}
 											/>
 									  )
-									: value.name}
+									: value.name }
 							</div>
 							<hr
 								className={`h-1 w-full ${

@@ -23,7 +23,7 @@ const socialIcons = [
 
 const Footer = () => {
     return (
-			<div className='bg-gray-800'>
+			<div className='bg-gray-800 mt-24'>
 				<div className='flex flex-row items-center justify-between mt-6 p-12'>
 					<div className='w-1/5'>
 						<Image

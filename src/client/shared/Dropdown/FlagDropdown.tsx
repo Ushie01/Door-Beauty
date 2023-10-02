@@ -18,7 +18,7 @@ const FlagDropDown = () => {
 	const [option, setOption] = useState<People | null>(null);
 
 	return (
-		<div className='flex w-full items-center h-12 border rounded'>
+		<div className='flex w-full items-center justify-center h-12 rounded border-r'>
 			<Dropdown
 				value={option}
 				onChange={setOption}>
@@ -28,7 +28,7 @@ const FlagDropDown = () => {
 							<Image
 								src={option ? option.flag : people[0].flag}
 								alt='flag'
-								className='flex flex-row h-5 w-10 ml-2'
+								className='flex flex-row h-5 -mr-3 w-10 '
 							/>
 
 							<Dropdown.InsetSelect

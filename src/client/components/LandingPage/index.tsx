@@ -9,19 +9,19 @@ import CosmeticsSection from './components/CosmeticsSection/CosmeticsSection';
 import DoorBeautyLinks from './components/DoorBeautyLinks/DoorBeautyLinks';
 import Footer from '../../shared/Footer';
 
+
 const LandingPage = () => {
 	return (
 		<div className='bg-white'>
 			<Header />
-			<CarouselContainer />
+			{/* <CarouselContainer />
 			<CategoryImageSection />
 			<SeasonSection />
 			<CarouselItem />
 			<Location />
 			<CosmeticsSection />
 			<DoorBeautyLinks />
-			<Footer />
-			
+			<Footer /> */}
 		</div>
 	);
 };

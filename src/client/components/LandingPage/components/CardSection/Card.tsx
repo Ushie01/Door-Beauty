@@ -38,9 +38,9 @@ const Card = ({photo, name, type, price, color}: DataProps) => {
 					</div>
 				</div>
 				<div className='p-3 w-full'>
-					<Button className='h-11 w-full rounded-3xl bg-orange-400 font-bold text-white'>
+					<button className='h-11 w-full rounded-3xl bg-orange-400 font-bold text-white'>
 						Add to Bag
-					</Button>
+					</button>
 				</div>
 			</div>
 		</div>

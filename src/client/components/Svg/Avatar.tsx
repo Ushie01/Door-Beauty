@@ -1,11 +1,16 @@
 import React from 'react'
 
-const Avatar = () => {
+type Props = {
+	width: string;
+	height: string;
+}
+
+const Avatar = ({width, height}:Props) => {
   return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			width='18'
-			height='18'
+			width={width}
+			height={height}
 			fill='currentColor'
 			className='bi bi-person'
 			viewBox='0 0 16 16'>
