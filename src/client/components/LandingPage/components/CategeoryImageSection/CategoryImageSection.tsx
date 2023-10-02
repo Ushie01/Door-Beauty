@@ -1,9 +1,17 @@
 import React from 'react';
-import { ITEMS } from '../constant/data';
+import { ITEMS } from '../../constant/data';
 import Image from 'next/image';
 import Link from 'next/link';
+import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
+import MobileCategoryView from './MobileCategoryView';
+
 
 const CategoryImageSection = () => {
+	const { isMobile } = useDeviceType();
+	if (isMobile) {
+		return <MobileCategoryView />
+	}
+
 	return (
 		<div className='flex items-center justify-between p-4 mt-8'>
 			{ITEMS.map((item, v) => (

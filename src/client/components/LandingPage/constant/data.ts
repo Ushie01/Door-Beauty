@@ -8,6 +8,12 @@ import food from '../components/CosmeticsSection/assets/food.jpeg';
 import tytry from '../components/CosmeticsSection/assets/try.png';
 import hhh from '../components/CosmeticsSection/assets/hhh.jpg';
 import jorge from '../components/CosmeticsSection/assets/xyz.png';
+import kids from '../../../../assets/kids.webp'
+import boys from '../../../../assets/boys.jpg';
+import girls from '../../../../assets/girls.jpeg';
+import men from '../../../../assets/men.jpg';
+import women from '../../../../assets/women.webp';
+
 import {
 	SportSpeedway,
 	ShopBank,
@@ -17,11 +23,11 @@ import {
 
 
 export const ITEMS = [
-    { image: Bigen, name: 'LADIES' },
-    { image: Clarol, name: 'GENTS' },
-    { image: CreamBeauty, name: 'GIRLS' },
-    { image: Bigen, name: 'BOYS' },
-    { image: Clarol, name: 'kids' },
+    { image: women, name: 'LADIES' },
+    { image: men, name: 'GENTS' },
+    { image: girls, name: 'GIRLS' },
+    { image: boys, name: 'BOYS' },
+    { image: kids, name: 'kids' },
 ]
 
 export const PRODUCT_DATA = [

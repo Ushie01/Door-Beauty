@@ -26,7 +26,7 @@ const LandScaleImage = () => {
 				{CarouselImages?.map((value, index) => (
 					<Carousel.Item
 						key={index}
-						className='w-full h-[450px]'>
+						className='w-full lg:h-[450px] px-4'>
 						{value}
 					</Carousel.Item>
 				))}

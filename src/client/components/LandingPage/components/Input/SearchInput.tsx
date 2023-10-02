@@ -4,7 +4,7 @@ import { Input } from './Input';
 
 const SearchInput = () => {
 	return (
-		<div className='relative lg:w-[500px] w-96 border'>
+		<div className='relative lg:w-[500px] w-full border'>
 			<Input
 				textColor='text-gray-900'
 				bgColor='bg-white'
