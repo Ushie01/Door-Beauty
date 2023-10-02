@@ -10,7 +10,7 @@ type Props = {
 
 const Card = ({photo, name, productCount}: Props) => {
 	return (
-		<div className='flex flex-col border w-64 h-80 rounded-md p-2 mt-12'>
+		<div className='flex flex-col border w-64 h-80 rounded-md p-2 mt-24'>
 			<Image
 				src={photo}
 				alt='Image'

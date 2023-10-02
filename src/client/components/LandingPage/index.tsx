@@ -19,8 +19,8 @@ const LandingPage = () => {
 			<CarouselItem />
 			<Location />
 			<CosmeticsSection />
-			{/* <DoorBeautyLinks />
-			<Footer /> */}
+			<DoorBeautyLinks />
+			{/* <Footer /> */}
 		</div>
 	);
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import Pointer from './../../../../assets/pointer4.gif';
 import Map from './../../../../assets/map1.png';
 import Image from 'next/image';
-import SearchInput from './Input/SearchInput';
 import LocationInput from './Input/LocationInput';
 
 
