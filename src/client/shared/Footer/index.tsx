@@ -2,24 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from './../../../assets/logo.png';
-import { FOOTER_DATA } from './constant/data';
-import FacebookIcon from '../../components/Svg/facebook';
-import InstagramIcon from '../../components/Svg/instagram';
-import LinkedinIcon from '../../components/Svg/linkedin';
-import TiktokIcon from '../../components/Svg/tiktok';
-import TwitterIcon from '../../components/Svg/twitter-x';
-import WhatsappIcon from '../../components/Svg/whatsapp';
+import { FOOTER_DATA, socialIcons } from './constant/data';
 import Payment from '../../../assets/payment.png';
 
-
-const socialIcons = [
-	FacebookIcon(),
-	InstagramIcon(),
-	LinkedinIcon(),
-	TiktokIcon(),
-	TwitterIcon(),
-	WhatsappIcon(),
-];
 
 const Footer = () => {
     return (

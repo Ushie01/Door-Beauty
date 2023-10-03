@@ -1,10 +1,11 @@
 import React from 'react';
 import { Carousel } from '@heathmont/moon-core-tw';
-import Card from '../CardSection/Card';
 import { PRODUCT_DATA } from '../../constant/data';
 import subBan from '../../../../../assets/sub-ban.png';
 import CustomCarousel from './CustomCarousel';
 import Image from 'next/image';
+import Card from '@/src/client/shared/CardSection/Card';
+
 
 const CarouselItem = () => {
 	const renderCarouselItems = () => {

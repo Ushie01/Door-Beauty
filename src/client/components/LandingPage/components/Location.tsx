@@ -2,8 +2,7 @@ import React from 'react';
 import Pointer from './../../../../assets/pointer4.gif';
 import Map from './../../../../assets/map1.png';
 import Image from 'next/image';
-import LocationInput from './Input/LocationInput';
-
+import LocationInput from './Input/FlexWidthInput';
 
 const Location = () => {
 	return (
@@ -12,8 +11,12 @@ const Location = () => {
 				<h1 className='font-extrabold text-transparent lg:text-9xl text-6xl mt-28 bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-800'>
 					Discover Us{' '}
 				</h1>
-				<p className='lg:text-3xl text-xl text-gray-400'>at your door step today</p>
-				<p className='lg:text-3xl text-xl text-gray-400'>and reach out to your peak beauty</p>
+				<p className='lg:text-3xl text-xl text-gray-400'>
+					at your door step today
+				</p>
+				<p className='lg:text-3xl text-xl text-gray-400'>
+					and reach out to your peak beauty
+				</p>
 			</div>
 			<Image
 				src={Pointer}
@@ -27,9 +30,10 @@ const Location = () => {
 					className='border-white lg:h-[400px] h-[200px] w-full -mt-10 lg:rounded-xl'
 				/>
 			</div>
-			<div className='flex items-center justify-center lg:-mt-10 -mt-10 w-full p-4'>
-				<LocationInput />
+			<div className='flex items-center justify-center lg:-mt-10 -mt-10 lg:w-[500px] w-full p-4'>
+				<LocationInput placeHolder='Search Store Location...' bgColor='bg-gray-100'/>
 			</div>
+
 		</div>
 	);
 };

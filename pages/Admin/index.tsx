@@ -1,10 +1,8 @@
-import Admin from '../../src/client/components/Auth/Admin/index'
-import React from 'react'
+import Admin from '../../src/client/components/Auth/Admin/index';
+import React from 'react';
 
 const Admins = () => {
-  return (
-	<Admin />
-  )
-}
+	return <Admin />;
+};
 
-export default Admins
+export default Admins;

@@ -8,10 +8,11 @@ import CarouselItem from './components/Carousel/ProductCarousel';
 import CosmeticsSection from './components/CosmeticsSection/CosmeticsSection';
 import DoorBeautyLinks from './components/DoorBeautyLinks/DoorBeautyLinks';
 import Footer from '../../shared/Footer';
+import Container from './container/container';
 
 const LandingPage = () => {
 	return (
-		<div className='bg-white'>
+		<Container>
 			<Header />
 			<CarouselContainer />
 			<CategoryImageSection />
@@ -21,7 +22,7 @@ const LandingPage = () => {
 			<CosmeticsSection />
 			<DoorBeautyLinks />
 			<Footer />
-		</div>
+		</Container>
 	);
 };
 

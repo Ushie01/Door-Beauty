@@ -14,7 +14,7 @@ const MobileCategoryView = () => {
 					<Image
 						src={item.image}
 						alt='item'
-						className='h-48 w-full p-2'
+						className='h-44 w-full p-2'
 					/>
 
 					<div className='absolute bg-black h-16 w-40 -mt-16 opacity-10 '></div>
