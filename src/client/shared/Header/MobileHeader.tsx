@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Drawer, IconButton } from '@heathmont/moon-core-tw';
+import {  Drawer, IconButton } from '@heathmont/moon-core-tw';
 import { ControlsCloseSmall } from '@heathmont/moon-icons-tw';
 import { GenericBurgerRegular } from '@heathmont/moon-icons-tw';
 import Logo from '../../../assets/logo.png';
