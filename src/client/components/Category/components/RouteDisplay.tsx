@@ -2,17 +2,25 @@ import React, { useState } from 'react';
 import DropDown from '@/src/client/shared/Dropdown/DropDown';
 import { people } from '@/src/client/shared/Header/constants/data';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
-import { Button, IconButton } from '@heathmont/moon-core-tw';
-import { MailFilter } from '@heathmont/moon-icons-tw';
+import { Button, Drawer, IconButton } from '@heathmont/moon-core-tw';
+import { ControlsCloseSmall, MailFilter } from '@heathmont/moon-icons-tw';
+import Filter from './Filter';
+
 
 const RouteDisplay = () => {
 	const { isMobile } = useDeviceType();
+	const [isOpen, setIsOpen] = useState(false);
 	const [option, setOption] = useState<string | []>('');
+	const handleClick = () => setIsOpen(true);
+	const handleClose = () => setIsOpen(false);
+
 
 	if(isMobile){
 		return (
 			<div className='flex flex-row items-center justify-end p-4 -mt-2'>
-				<button className='flex items-center justify-center px-2 py-1 border rounded-md'>
+				<button
+					onClick={handleClick}
+					className='flex items-center justify-center px-2 py-1 border rounded-md'>
 					<MailFilter
 						className='text-orange-700'
 						height={36}
@@ -20,9 +28,25 @@ const RouteDisplay = () => {
 					/>
 					<p>Filter</p>
 				</button>
+				<Drawer
+					open={isOpen}
+					setOpen={setIsOpen}>
+					<Drawer.Panel className='flex flex-col overflow-y-scroll bg-white border-r p-6'>
+						<div className='flex items-center justify-end mb-2'>
+							<IconButton
+								variant='ghost'
+								onClick={handleClose}
+								aria-label='Close'>
+								<ControlsCloseSmall />
+							</IconButton>
+						</div>
+						<Filter />
+					</Drawer.Panel>
+				</Drawer>
 			</div>
 		);
 	}
+
 	return (
 		<div className='flex flex-col'>
 			<div className='py-5 px-12'>

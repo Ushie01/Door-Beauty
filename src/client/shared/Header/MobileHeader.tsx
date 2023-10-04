@@ -12,7 +12,6 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import DropDown from '../Dropdown/DropDown';
 import { DATA } from './constants/data';
-import MobileHeaderContent from './MobileHeaderContent';
 
 type Data = {
 	id: string;
@@ -33,17 +32,18 @@ const MobileHeader = () => {
 	return (
 		<div className='p-4 w-full'>
 			<div className='flex items-center justify-between'>
-				<Button onClick={handleClick}>
+				<button onClick={handleClick}>
 					<GenericBurgerRegular
 						height={30}
 						width={30}
 						className='border'
 					/>
-				</Button>
+				</button>
+
 				<Drawer
 					open={isOpen}
 					setOpen={setIsOpen}>
-					<Drawer.Panel className='bg-white border-r'>
+					<Drawer.Panel className='bg-white border-r-2'>
 						<div className='flex justify-between items-center p-3 border-b border-trunks'>
 							<FlagDropDown />
 							<div className='flex '>
@@ -55,10 +55,60 @@ const MobileHeader = () => {
 								</IconButton>
 							</div>
 						</div>
+						<div className='flex flex-col items-start justify-start p-4 space-y-4 text-black'>
+							<Link
+								href='#'
+								className='flex items-center justify-center space-x-3'>
+								<Avatar
+									width='17'
+									height='17'
+								/>
+								<p className='font-semibold text-md'>Account</p>
+							</Link>
 
-						<MobileHeaderContent />
+							<hr className='w-full' />
+
+							<Link
+								href='#'
+								className='flex items-center justify-center space-x-3'>
+								<Heart
+									width='17'
+									height='17'
+								/>
+								<p className='text-md font-semibold'>WishList</p>
+							</Link>
+						</div>
+
+						<hr className='w-full border-black' />
+						
+						{DATA.map((value) => (
+							<React.Fragment key={value.id}>
+								<Link
+									href='#'
+									onClick={() => onHandleClick(value)}>
+									{value.data ? (
+										value.data && (
+											<div className='flex flex-col space-y-4 mt-4 text-md'>
+												<DropDown
+													title={value.name}
+													arrayTitle={value.data}
+													setLink={setData}
+												/>
+												<hr className='w-full' />
+											</div>
+										)
+									) : (
+										<div className='flex flex-col space-y-4 mt-4'>
+											<p className='text-md px-4'>{value.name}</p>
+											<hr className='w-full' />
+										</div>
+									)}
+								</Link>
+							</React.Fragment>
+						))}
 					</Drawer.Panel>
 				</Drawer>
+
 				<Image
 					src={Logo}
 					alt='Logo'
