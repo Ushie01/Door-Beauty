@@ -1,4 +1,3 @@
-
 import CosmeticDetail from '@/src/client/components/CosmeticDetails';
 import type { NextPage } from 'next';
 

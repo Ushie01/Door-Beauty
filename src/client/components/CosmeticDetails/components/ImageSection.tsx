@@ -17,7 +17,7 @@ const ImageSection = () => {
 
 	return (
 		<div className='py-6 px-16'>
-			<h1>Home Page / Woman / Creme Beauty</h1>
+			<h1 className='text-black'>Home Page / Woman / Creme Beauty</h1>
 			<div className='flex items-center justify-between mt-8'>
 				<div className='flex items-center justify-start w-1/2 space-x-1'>
 					<div className='flex flex-col items-center justify-start space-y-1'>
@@ -46,8 +46,10 @@ const ImageSection = () => {
 				<div className='py-12 pl-12 w-1/2'>
 					<div className='flex items-cente justify-between'>
 						<div>
-							<h1 className='font-bold text-2xl'>ALOE & BLACK CASTOR OIL</h1>
-							<p className='font-bold text-2xl'>$39.99</p>
+							<h1 className='font-bold text-2xl text-black'>
+								ALOE & BLACK CASTOR OIL
+							</h1>
+							<p className='font-bold text-2xl text-black'>$39.99</p>
 						</div>
 						<Button className='rounded-full p-1 h-10 w-10 border-2'>
 							<Heart
@@ -102,8 +104,12 @@ const ImageSection = () => {
 						</Button>
 
 						<Button className='flex items-center justify-center w-full text-white h-12 border rounded shadow-xl'>
-								<ShopCart height={28} width={28} className='text-gray-600'/>
-								<p className='text-md text-gray-500'>ADD TO CART</p>
+							<ShopCart
+								height={28}
+								width={28}
+								className='text-gray-600'
+							/>
+							<p className='text-md text-gray-500'>ADD TO CART</p>
 						</Button>
 					</div>
 				</div>
