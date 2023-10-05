@@ -10,7 +10,7 @@ import CremeFive from '../assets/creme5.png';
 
 export const PRODUCT_IMAGE = [Two, One, Three, Four];
 
-export const DETAIL_ROUTE = ['PRODUCT DETAILS', 'DESCRIPTION', 'REVIEWS'];
+export const DETAIL_ROUTE = ['PRODUCT DETAILS',  'REVIEWS'];
 
 export const DETAIL_DATA = [
 	{

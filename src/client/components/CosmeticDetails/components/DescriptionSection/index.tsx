@@ -10,7 +10,7 @@ const Description = () => {
 	}, [setClick]);
 
 	return (
-		<div className='mt-16 px-16'>
+		<div className='lg:mt-16 lg:px-16 mt-10 px-4'>
 			<Toggle setClick={setClick} />
 			<hr className='mt-5' />
 			{renderComponent()}

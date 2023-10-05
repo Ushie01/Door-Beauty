@@ -3,7 +3,7 @@ import React from 'react'
 const ProductDetailsSection = () => {
   return (
 		<div className='flex items-start justify-start mt-5 '>
-			<div className='flex flex-col items-start justify-start text-black w-1/2 pr-10'>
+			<div className='flex flex-col items-start justify-start text-black w-1/2 lg:pr-10 pr-1'>
 				<div>
 					<p className='text-xl font-bold'>Product Description</p>
 					<p className='mt-4'>
@@ -28,7 +28,7 @@ const ProductDetailsSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-col items-start justify-start text-black w-1/2 pl-10'>
+			<div className='flex flex-col items-start justify-start text-black w-1/2 lg:pl-10 pl-1'>
 				<div>
 					<p className='text-xl font-bold'>How To Use</p>
 					<p className='mt-4'>
