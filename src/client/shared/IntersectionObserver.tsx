@@ -1,34 +1,34 @@
-import { useEffect, useRef } from 'react';
+// import { useEffect, useRef } from 'react';
 
-const useIntersectionObserver = (callback) => {
-	const intersectionRef = useRef(null);
+// const useIntersectionObserver = (callback) => {
+// 	const intersectionRef = useRef(null);
 
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						callback(); 
-					}
-				});
-			},
-			{
-				root: null,
-				rootMargin: '0px',
-				threshold: 1.0,
-			}
-		);
+// 	useEffect(() => {
+// 		const observer = new IntersectionObserver(
+// 			(entries) => {
+// 				entries.forEach((entry) => {
+// 					if (entry.isIntersecting) {
+// 						callback(); 
+// 					}
+// 				});
+// 			},
+// 			{
+// 				root: null,
+// 				rootMargin: '0px',
+// 				threshold: 1.0,
+// 			}
+// 		);
 
-		if (intersectionRef.current) {
-			observer.observe(intersectionRef.current);
-		}
+// 		if (intersectionRef.current) {
+// 			observer.observe(intersectionRef.current);
+// 		}
 
-		return () => {
-			observer.disconnect();
-		};
-	}, [callback]); 
+// 		return () => {
+// 			observer.disconnect();
+// 		};
+// 	}, [callback]); 
 
-	return intersectionRef;
-};
+// 	return intersectionRef;
+// };
 
-export default useIntersectionObserver;
+// export default useIntersectionObserver;
