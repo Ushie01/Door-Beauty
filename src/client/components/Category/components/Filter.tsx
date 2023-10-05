@@ -3,7 +3,7 @@ import { GenericBurgerZig } from '@heathmont/moon-icons-tw';
 import FlexWidthInput from '../../LandingPage/components/Input/FlexWidthInput';
 import { BEST_SELLERS, BRANDS, CATEGORY, PRICE } from '../constant/data';
 import CheckBox from '@/src/client/shared/Checkbox';
-import DropDown from '@/src/client/shared/Dropdown/DropDown';
+import DropDown from '@/src/client/shared/DropDown/DropDown';
 
 const Filter = () => {
 	const [option, setOption] = useState<string | []>('');

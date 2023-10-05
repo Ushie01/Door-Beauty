@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  Drawer, IconButton } from '@heathmont/moon-core-tw';
+import { Drawer, IconButton } from '@heathmont/moon-core-tw';
 import { ControlsCloseSmall } from '@heathmont/moon-icons-tw';
 import { GenericBurgerRegular } from '@heathmont/moon-icons-tw';
 import Logo from '../../../assets/logo.png';
@@ -7,10 +7,10 @@ import Image from 'next/image';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
 import SearchInput from '../../components/LandingPage/components/Input/SearchInput';
-import FlagDropDown from '../Dropdown/FlagDropdown';
+import FlagDropDown from '../DropDown/FlagDropdown';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
-import DropDown from '../Dropdown/DropDown';
+import DropDown from '../DropDown/DropDown';
 import { DATA } from './constants/data';
 
 type Data = {
@@ -80,7 +80,7 @@ const MobileHeader = () => {
 						</div>
 
 						<hr className='w-full border-black' />
-						
+
 						{DATA.map((value) => (
 							<React.Fragment key={value.id}>
 								<Link

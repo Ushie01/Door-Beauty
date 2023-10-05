@@ -6,7 +6,7 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
-import FlagDropDown from '../Dropdown/FlagDropdown';
+import FlagDropDown from '../DropDown/FlagDropdown';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
 
 const DeskTopHeader = () => {

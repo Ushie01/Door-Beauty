@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import DropDown from '@/src/client/shared/Dropdown/DropDown';
+import DropDown from '@/src/client/shared/DropDown/DropDown';
 import { people } from '@/src/client/shared/Header/constants/data';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import { Button, Drawer, IconButton } from '@heathmont/moon-core-tw';
 import { ControlsCloseSmall, MailFilter } from '@heathmont/moon-icons-tw';
 import Filter from './Filter';
-
 
 const RouteDisplay = () => {
 	const { isMobile } = useDeviceType();
@@ -14,8 +13,7 @@ const RouteDisplay = () => {
 	const handleClick = () => setIsOpen(true);
 	const handleClose = () => setIsOpen(false);
 
-
-	if(isMobile){
+	if (isMobile) {
 		return (
 			<div className='flex flex-row items-center justify-end p-4 -mt-2'>
 				<button

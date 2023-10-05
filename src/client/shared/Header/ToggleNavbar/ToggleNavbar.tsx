@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { DATA } from '../constants/data';
-import DropDown from '../../Dropdown/DropDown';
+import DropDown from '../../DropDown/DropDown';
 
 type Data = {
 	id: string;
@@ -37,7 +37,7 @@ const ToggleNavbar = () => {
 												setLink={setLink}
 											/>
 									  )
-									: value.name }
+									: value.name}
 							</div>
 							<hr
 								className={`h-1 w-full ${
