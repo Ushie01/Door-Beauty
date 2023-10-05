@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DropDown from '@/src/client/shared/DropDown/DropDown';
+import DropDown from '@/src/client/shared/DropDown';
 import { people } from '@/src/client/shared/Header/constants/data';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import { Button, Drawer, IconButton } from '@heathmont/moon-core-tw';

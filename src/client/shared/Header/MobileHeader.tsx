@@ -10,7 +10,7 @@ import SearchInput from '../../components/LandingPage/components/Input/SearchInp
 import FlagDropDown from '../DropDown/FlagDropdown';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
-import DropDown from '../DropDown/DropDown';
+import DropDown from '../DropDown';
 import { DATA } from './constants/data';
 
 type Data = {
