@@ -13,7 +13,7 @@ type DataProps = {
 
 const Card = ({photo, name, type, price, color}: DataProps) => {
 	return (
-		<div className='flex flex-col h-[500px]  w-80 shadow-lg bg-white border'>
+		<div className='relative flex flex-col h-[470px]  w-80 shadow-lg bg-white border overflow-hidden group'>
 			<div className='flex items-center justify-end w-full h-12'>
 				<Button>
 					<GenericHeart
@@ -28,13 +28,13 @@ const Card = ({photo, name, type, price, color}: DataProps) => {
 				alt='Bigen'
 				className='w-full h-64'
 			/>
-			<div className='flex flex-col justify-end w-full -mt-20border'>
+			<div className='absolute bottom-0 right-0 left-0 bg-white bg-opacity-70 text-white px-4 transform -translate-y-[-60px] transition-transform duration-300 group-hover:translate-y-0'>
 				<div className='flex flex-col font-bold px-3 space-y-1'>
-                    <p className='text-black mt-11'>{name}</p>
-                    <p className='text-gray-500'>{type}</p>
+					<p className='text-black mt-11'>{name}</p>
+					<p className='text-gray-500'>{type}</p>
 					<div className='flex items-center justify-between'>
-                        <p className='text-orange-400 text-2xl'>{price}</p>
-                        <p>{color}</p>
+						<p className='text-orange-400 text-2xl'>{price}</p>
+						<p className='text-black'>{color}</p>
 					</div>
 				</div>
 				<div className='p-3 w-full'>

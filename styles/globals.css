@@ -6,14 +6,6 @@
   outline: none;
 }
 
-/* Card.module.css */
-.cardContainer {
-  /* your styles for the card container */
-}
-
-.heartIcon {
-  /* your styles for the heart icon */
-}
 
 .buttonContainer {
   position: relative;

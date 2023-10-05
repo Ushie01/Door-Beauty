@@ -15,19 +15,19 @@ const Toggle = ({ setClick }: { setClick: (value: string) => void }) => {
 	}, []);
 
 	return (
-		<ul className='flex items-center justify-center space-x-8'>
+		<div className='flex items-center justify-center space-x-8'>
 			{DETAIL_ROUTE.map((value, index) => (
 				<React.Fragment key={index}>
-					<li
+					<button
 						onClick={() => handleClick(value)}
 						className={`text-black font-bold text-md ${
 							link === value ? 'text-black' : 'text-gray-300'
 						}`}>
 						{value}
-					</li>
+					</button>
 				</React.Fragment>
 			))}
-		</ul>
+		</div>
 	);
 };
 

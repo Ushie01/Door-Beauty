@@ -4,6 +4,7 @@ import ImageSection from './components/ImageSection'
 import Header from '../../shared/Header/Header'
 import Footer from '../../shared/Footer'
 import DescriptionSection from './components/DescriptionSection'
+import RelatedCarouselItems from './RelatedCarouselItems'
 
 
 const CosmeticDetail = () => {
@@ -12,6 +13,7 @@ const CosmeticDetail = () => {
             <Header/>
             <ImageSection />
             <DescriptionSection />
+            <RelatedCarouselItems/>
             <Footer/>
       </DetailContainer>
   )
