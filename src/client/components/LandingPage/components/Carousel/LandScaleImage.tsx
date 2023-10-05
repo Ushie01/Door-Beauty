@@ -25,9 +25,10 @@ const LandScaleImage = () => {
 
 	return (
 		<Carousel
-			autoSlideDelay={5000}
+			autoSlideDelay={6000}
 			scrollTo={1}
 			step={1}>
+				
 			<Carousel.Reel>
 				{CarouselImages?.map((value, index) => (
 					<Carousel.Item

@@ -5,11 +5,10 @@ import Link from 'next/link';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import MobileCategoryView from './MobileCategoryView';
 
-
 const CategoryImageSection = () => {
 	const { isMobile } = useDeviceType();
 	if (isMobile) {
-		return <MobileCategoryView />
+		return <MobileCategoryView />;
 	}
 
 	return (
@@ -33,9 +32,11 @@ const CategoryImageSection = () => {
 					</Link>
 				</>
 			))}
-			<div className='flex flex-col items-center justify-center hover:bg-black h-52 w-52 border rounded p-2 bg-[#8F1616]'>
-				<p className='text-6xl font-bold text-white'>SALE</p>
-			</div>
+			<Link href='#'>
+				<div className='flex flex-col items-center justify-center hover:bg-black h-52 w-52 border rounded p-2 bg-[#8F1616]'>
+					<p className='text-6xl font-bold text-white'>SALE</p>
+				</div>
+			</Link>
 		</div>
 	);
 };

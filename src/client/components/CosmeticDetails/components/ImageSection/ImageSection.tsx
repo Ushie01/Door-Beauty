@@ -5,6 +5,7 @@ import {
 	ControlsPlus,
 	ControlsMinus,
 	ShopCart,
+	GenericHeart,
 } from '@heathmont/moon-icons-tw';
 import { Button } from '@heathmont/moon-core-tw';
 import Heart from '../../../Svg/Heart';
@@ -37,25 +38,36 @@ const ImageSection = () => {
 							/>
 						))}
 					</div>
-					<Image
-						src={selectedImage ? selectedImage : PRODUCT_IMAGE[0].src}
-						alt='product image'
-						onClick={() => handleClick('green')}
-						height={700}
-						width={500}
-						className={`${selectedImage ? `bg-${selectedImage}-500` : ''}`}
-					/>
+
+					<div className='relative'>
+						<Image
+							src={selectedImage ? selectedImage : PRODUCT_IMAGE[0].src}
+							alt='product image'
+							onClick={() => handleClick('green')}
+							height={700}
+							width={500}
+							className={`${selectedImage ? `bg-${selectedImage}-500` : ''}`}
+						/>
+						<Button className='absolute top-5 right-5 border-white bg-white m-auto lg:hidden  rounded-full p-1 h-10 w-10 border-2'>
+							<GenericHeart
+								height={34}
+								width={34}
+								fill='red'
+								color='white'
+							/>
+						</Button>
+					</div>
 				</div>
 
 				<div className='lg:py-12 lg:pl-12 lg:w-1/2 lg:mt-0 mt-6'>
-					<div className='flex items-center  justify-between'>
+					<div className='flex flex-row items-center  justify-between'>
 						<div>
 							<h1 className='font-bold text-2xl text-black'>
 								ALOE & BLACK CASTOR OIL
 							</h1>
 							<p className='font-bold text-2xl text-black'>$39.99</p>
 						</div>
-						<Button className='m-auto lg:block hidden rounded-full p-1 h-10 w-10 border-2'>
+						<Button className='m-auto lg:block hidden rounded-full ml-52 p-1 pl-2 h-10 w-10 border-2'>
 							<Heart
 								height='20'
 								width='20'

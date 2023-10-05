@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GenericBurgerZig } from '@heathmont/moon-icons-tw';
-import FlexWidthInput from '../../LandingPage/components/Input/FlexWidthInput';
+import FlexWidthInput from '../../../shared/Input/FlexWidthInput';
 import { BEST_SELLERS, BRANDS, CATEGORY, PRICE } from '../constant/data';
 import CheckBox from '@/src/client/shared/Checkbox';
 import DropDown from '../../../shared/DropDown';

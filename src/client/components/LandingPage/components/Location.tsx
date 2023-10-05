@@ -2,7 +2,7 @@ import React from 'react';
 import Pointer from './../../../../assets/pointer4.gif';
 import Map from './../../../../assets/map1.png';
 import Image from 'next/image';
-import LocationInput from './Input/FlexWidthInput';
+import LocationInput from '../../../shared/Input/FlexWidthInput';
 
 const Location = () => {
 	return (
@@ -31,9 +31,11 @@ const Location = () => {
 				/>
 			</div>
 			<div className='flex items-center justify-center lg:-mt-10 -mt-10 lg:w-[500px] w-full p-4'>
-				<LocationInput placeHolder='Search Store Location...' bgColor='bg-gray-100'/>
+				<LocationInput
+					placeHolder='Search Store Location...'
+					bgColor='bg-gray-100'
+				/>
 			</div>
-
 		</div>
 	);
 };

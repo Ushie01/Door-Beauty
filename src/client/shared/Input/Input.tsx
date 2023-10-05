@@ -11,7 +11,7 @@ export const Input = ({textColor, bgColor, placeHolder}: TextProps) => {
 			type='text'
 			name='price'
 			id='price'
-			className={`block w-full py-1.5 lg:pl-4 pl-2 font-bold  ${textColor} ${bgColor} h-12 placeholder:text-gray-400 lg:text-md text-sm`}
+			className={`block w-full py-1.5 lg:pl-4 pl-2 font-bold  ${textColor} ${bgColor} h-12 borderless-input placeholder:text-gray-400 lg:text-md text-sm`}
 			placeholder={placeHolder}
 		/>
 	);

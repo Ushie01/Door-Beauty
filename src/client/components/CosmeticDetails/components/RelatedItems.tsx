@@ -1,5 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 type Props = {
 	image: StaticImageData;
@@ -9,7 +10,8 @@ type Props = {
 
 const RelatedItems = ({ image, name, value }: Props) => {
 	return (
-		<div className='flex items-center justify-center w-full lg:mt-10 mt-5'>
+		<Link href='#'>
+			<div className='flex items-center justify-center w-full lg:mt-10 mt-5'>
 			<div className='relative rounded-xl border overflow-hidden group'>
 				<Image
 					src={image}
@@ -22,6 +24,7 @@ const RelatedItems = ({ image, name, value }: Props) => {
 				</div>
 			</div>
 		</div>
+		</Link>
 	);
 };
 

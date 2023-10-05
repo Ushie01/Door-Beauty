@@ -1,13 +1,13 @@
 import React from 'react';
-import Search from '../../../Svg/SearchIcon';
+import Search from '../../components/Svg/SearchIcon';
 import { Input } from './Input';
 
 type Props = {
 	placeHolder: string;
-	bgColor: string
-}
+	bgColor: string;
+};
 
-const FlexWidthInput = ({placeHolder, bgColor}: Props) => {
+const FlexWidthInput = ({ placeHolder, bgColor }: Props) => {
 	return (
 		<div className='relative w-full border'>
 			<Input

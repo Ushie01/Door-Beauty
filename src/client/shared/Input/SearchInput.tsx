@@ -1,16 +1,16 @@
 import React from 'react';
-import Search from '../../../Svg/SearchIcon';
+import Search from '../../components/Svg/SearchIcon';
 import { Input } from './Input';
 
 const SearchInput = () => {
 	return (
-		<div className='relative lg:w-[500px] w-full border'>
+		<div className='flex lg:w-[500px] w-full border'>
 			<Input
 				textColor='text-gray-900'
 				bgColor='bg-white'
 				placeHolder='Search Product...'
 			/>
-			<div className='absolute inset-y-0 right-0 flex items-center space-x-3 mr-5'>
+			<div className=' inset-y-0 right-0 flex items-center space-x-3 mr-5'>
 				<select
 					id='currency'
 					name='currency'

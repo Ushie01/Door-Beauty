@@ -6,7 +6,7 @@ import Logo from '../../../assets/logo.png';
 import Image from 'next/image';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
-import SearchInput from '../../components/LandingPage/components/Input/SearchInput';
+import SearchInput from '../Input/SearchInput';
 import FlagDropDown from '../DropDown/FlagDropdown';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
