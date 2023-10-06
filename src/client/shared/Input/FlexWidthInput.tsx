@@ -9,12 +9,15 @@ type Props = {
 
 const FlexWidthInput = ({ placeHolder, bgColor }: Props) => {
 	return (
-		<div className='relative w-full border'>
-			<Input
-				textColor='text-gray-300'
-				bgColor={bgColor}
-				placeHolder={placeHolder}
-			/>
+		<div className='flex relative w-full border bg-white'>
+			<div className='lg:w-[400px]'>
+				<Input
+					textColor='text-black'
+					bgColor={bgColor}
+					placeHolder={placeHolder}
+				/>
+			</div>
+
 			<div className='absolute inset-y-0 right-0 flex items-center space-x-3 mr-5'>
 				<p className='text-gray-300 '>|</p>
 				<button>

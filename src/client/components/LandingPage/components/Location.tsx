@@ -3,6 +3,7 @@ import Pointer from './../../../../assets/pointer4.gif';
 import Map from './../../../../assets/map1.png';
 import Image from 'next/image';
 import LocationInput from '../../../shared/Input/FlexWidthInput';
+import GoogleMapComponent from './GoogleMapApi';
 
 const Location = () => {
 	return (
@@ -23,12 +24,13 @@ const Location = () => {
 				alt='pointer'
 				className='border-white h-64 w-64 lg:-mt-10 -mt-16'
 			/>
-			<div className='lg:px-52 w-full'>
-				<Image
+			<div className='w-full'>
+				{/* <Image
 					src={Map}
 					alt='pointer'
 					className='border-white lg:h-[400px] h-[200px] w-full -mt-10 lg:rounded-xl'
-				/>
+				/> */}
+				<GoogleMapComponent apiKey='AIzaSyDf0FBnr2wvvk9NViYiJwJ7Sm1XebmLIFM' />
 			</div>
 			<div className='flex items-center justify-center lg:-mt-10 -mt-10 lg:w-[500px] w-full p-4'>
 				<LocationInput
