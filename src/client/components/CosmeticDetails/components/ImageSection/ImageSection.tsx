@@ -10,6 +10,7 @@ import {
 import { Button } from '@heathmont/moon-core-tw';
 import Heart from '../../../Svg/Heart';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
+import IncrementButton from '@/src/client/shared/IncrementButton';
 
 const ImageSection = () => {
 	const { isMobile } = useDeviceType();
@@ -77,23 +78,7 @@ const ImageSection = () => {
 
 					<div className='flex items-center justify-start lg:space-x-4 space-x-3 lg:mt-9 mt-4'>
 						<p className='font-bold'>Quantity</p>
-						<div className='flex items-center justify-center lg:space-x-4 border rounded'>
-							<Button>
-								<ControlsPlus
-									height={25}
-									width={25}
-									color='gray'
-								/>
-							</Button>
-							<p className='font-bold text-xl'>2</p>
-							<Button>
-								<ControlsMinus
-									height={25}
-									width={25}
-									color='gray'
-								/>
-							</Button>
-						</div>
+						<IncrementButton/>
 					</div>
 
 					<div className='w-full bg-slate-200 lg:px-12 px-4 py-4 space-y-3 rounded lg:mt-10 mt-4'>
@@ -115,17 +100,16 @@ const ImageSection = () => {
 					</div>
 
 					<div className='flex flex-row lg:mt-10 mt-4 lg:space-x-4 space-x-2 font-thin'>
-						<Button className=' w-full text-white text-md h-12 bg-orange-500 rounded shadow-xl'>
-							SHOW NOW
-						</Button>
-
-						<Button className='flex items-center justify-center w-full text-white h-12 border rounded shadow-xl'>
+						<Button className='flex items-center justify-center bg-orange-500 w-full text-white h-12 border rounded shadow-xl'>
 							<ShopCart
 								height={28}
 								width={28}
-								className='text-gray-600'
+								className='text-white'
 							/>
-							<p className='text-md text-gray-500'>ADD TO CART</p>
+							<p className='text-md text-white'>ADD TO CART</p>
+						</Button>
+						<Button className=' w-full border text-md h-12 bg-white text-gray-500 rounded shadow-xl'>
+							SHOP NOW
 						</Button>
 					</div>
 				</div>
