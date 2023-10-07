@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-interface Location {
+type Location = {
 	geometry: {
 		location: {
 			lat: () => number;
@@ -12,7 +12,7 @@ interface Location {
 	place_id: string;
 }
 
-interface GoogleMapComponentProps {
+type GoogleMapComponentProps = {
 	apiKey: string;
 }
 

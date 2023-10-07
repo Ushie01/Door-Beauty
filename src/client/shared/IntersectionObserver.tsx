@@ -1,34 +1,45 @@
-// import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-// const useIntersectionObserver = (callback) => {
-// 	const intersectionRef = useRef(null);
+type Props = {
+	verticalTransition: string;
+	intersection: JSX.Element;
+};
 
-// 	useEffect(() => {
-// 		const observer = new IntersectionObserver(
-// 			(entries) => {
-// 				entries.forEach((entry) => {
-// 					if (entry.isIntersecting) {
-// 						callback(); 
-// 					}
-// 				});
-// 			},
-// 			{
-// 				root: null,
-// 				rootMargin: '0px',
-// 				threshold: 1.0,
-// 			}
-// 		);
+const IntersectionComponent = ({ verticalTransition, intersection }: Props) => {
+	const elementRef = useRef<HTMLDivElement>(null!);
+	const [isVisible, setIsVisible] = useState<boolean>(false);
 
-// 		if (intersectionRef.current) {
-// 			observer.observe(intersectionRef.current);
-// 		}
+	useEffect(() => {
+		const options = {
+			root: null,
+			rootMargin: '44px',
+			threshold: 0.0,
+		};
+		const observer = new IntersectionObserver((entries) => {
+			const entry = entries[0];
+			setIsVisible(entry.isIntersecting);
+		}, options);
 
-// 		return () => {
-// 			observer.disconnect();
-// 		};
-// 	}, [callback]); 
+		if (elementRef.current) {
+			observer.observe(elementRef.current);
+		} else {
+			observer.unobserve(elementRef.current);
+		}
 
-// 	return intersectionRef;
-// };
+	}, [elementRef, setIsVisible]);
 
-// export default useIntersectionObserver;
+    
+	return (
+		<div
+			ref={elementRef}
+			className={`${
+				isVisible === true
+					? 'opacity-95 transition-transform duration-1000'
+					: `opacity-30 transform ${verticalTransition}  transition-transform duration-300`
+			}`}>
+			{intersection}
+		</div>
+	);
+};
+
+export default IntersectionComponent;
