@@ -8,8 +8,12 @@ import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
 import FlagDropDown from '../DropDown/FlagDropdown';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
+import { useCart } from '../hooks/useCart';
+
+
 
 const DeskTopHeader = () => {
+	const { cart } = useCart();
 	return (
 		<div className='flex items-center justify-between px-4 text-white border-2'>
 			<Image
@@ -31,10 +35,10 @@ const DeskTopHeader = () => {
 							<p>Account</p>
 						</Link>
 						<Link
-							href='#'
+							href='/checkout'
 							className='relative flex items-center justify-center space-x-2'>
 							<div className='absolute flex items-center justify-center bg-orange-500 text-white h-5 w-5 p-1 -mt-6 mr-4 rounded-full text-xs'>
-								<p>0</p>
+								<p>{cart.length}</p>
 							</div>
 
 							<Cart />

@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
 import { Button } from '@heathmont/moon-core-tw';
 import Link from 'next/link';
+import { useCart } from '@/src/client/shared/hooks/useCart';
 
 const CardSection = () => {
+	const { cart } = useCart();
+	console.log(cart);
 	return (
 		<div className='flex lg:flex-row flex-col lg:px-16 lg:py-12 w-full'>
 			<div className='flex flex-col lg:w-9/12 w-full p-4'>
 				<h1 className='text-bold'>
-					<span className='text-black font-bold text-xl'>Card</span> (3)
+					<span className='text-black font-bold text-xl'>Card</span> ({cart.length})
 				</h1>
 				<div className='mt-8 space-y-6'>
-					<Card />
-					<Card />
-					<Card />
-					<Card />
+					{cart.map((value, index) => (
+						<div key={index}>
+							<Card {...value} />
+						</div>
+					))}
 				</div>
 				<Link
 					href='#'
