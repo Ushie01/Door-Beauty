@@ -12,8 +12,9 @@ type Props = {
 const CustomCarousel = ({ renderCarouselItems }: Props) => {
 	return (
 		<Carousel
-			autoSlideDelay={3000}
-			step={1}>
+			// autoSlideDelay={3000}
+			step={1}
+		>
 			<Carousel.LeftArrow className='bg-gray-500'>
 				<ControlsChevronLeftSmall color='white' />
 			</Carousel.LeftArrow>

@@ -18,7 +18,7 @@ const RouteDisplay = () => {
 			<div className='flex flex-row items-center justify-end p-4 -mt-2'>
 				<button
 					onClick={handleClick}
-					className='flex items-center justify-center px-2 py-1 border rounded-md'>
+					className='flex items-center justify-center px-2 py-1 rounded-md'>
 					<MailFilter
 						className='text-orange-700'
 						height={36}
@@ -26,10 +26,11 @@ const RouteDisplay = () => {
 					/>
 					<p>Filter</p>
 				</button>
+				
 				<Drawer
 					open={isOpen}
 					setOpen={setIsOpen}>
-					<Drawer.Panel className='flex flex-col overflow-y-scroll bg-white border-r p-6'>
+					<Drawer.Panel className='flex flex-col overflow-y-scroll bg-white border-r-2 p-6'>
 						<div className='flex items-center justify-end mb-2'>
 							<IconButton
 								variant='ghost'

@@ -25,8 +25,10 @@ const CosmeticsSection = () => {
 			<p className='text-2xl text-black font-bold pt-5'>
 				Any Time, Any <br /> Place, Cosmetics Store
 			</p>
-			<CustomCarousel renderCarouselItems={renderCarouselItems} />
-			<div className='flex lg:flex-row flex-col items-center justify-between lg:mt-20 mt-10 w-full'>
+			<div className='mt-12'>
+				<CustomCarousel renderCarouselItems={renderCarouselItems} />
+			</div>
+			<div className='flex lg:flex-row flex-col items-center justify-between lg:mt-40 mt-10 w-full'>
 				<IntersectionComponent
 					intersection={
 						<Image

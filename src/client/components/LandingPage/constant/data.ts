@@ -32,6 +32,7 @@ export const ITEMS = [
 
 export const PRODUCT_DATA = [
     {
+        id: 1,
         photo: Bigen,
         name: 'Bigen Oz',
         type: 'Soap',
@@ -39,6 +40,7 @@ export const PRODUCT_DATA = [
         color: 'orange'
     },
     {
+        id: 2,
         photo: Clarol,
         name: 'Clarol White',
         type: 'Soap | Cream',
@@ -46,13 +48,15 @@ export const PRODUCT_DATA = [
         color: 'White'
     },
     {
+        id: 3,
         photo: CreamBeauty ,
         name: 'Cream Beauty ',
         type: 'Cream',
         price: '$140.00',
         color: 'White'
     },
-        {
+    {
+        id: 4,
         photo: Bigen,
         name: 'Bigen Oz',
         type: 'Soap',
@@ -60,6 +64,7 @@ export const PRODUCT_DATA = [
         color: 'orange'
     },
     {
+        id: 5,
         photo: Clarol,
         name: 'Clarol White',
         type: 'Soap | Cream',
@@ -67,13 +72,15 @@ export const PRODUCT_DATA = [
         color: 'White'
     },
     {
+        id: 6,
         photo: CreamBeauty ,
         name: 'Cream Beauty ',
         type: 'Cream',
         price: '$140.00',
         color: 'White'
     },
-        {
+    {
+        id: 7,
         photo: Bigen,
         name: 'Bigen Oz',
         type: 'Soap',
@@ -81,6 +88,7 @@ export const PRODUCT_DATA = [
         color: 'orange'
     },
     {
+        id: 8,
         photo: Clarol,
         name: 'Clarol White',
         type: 'Soap | Cream',
@@ -88,6 +96,7 @@ export const PRODUCT_DATA = [
         color: 'White'
     },
     {
+        id: 8,
         photo: CreamBeauty ,
         name: 'Cream Beauty ',
         type: 'Cream',

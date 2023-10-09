@@ -10,7 +10,7 @@ import {
 import { Button } from '@heathmont/moon-core-tw';
 import Heart from '../../../Svg/Heart';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
-import IncrementButton from '@/src/client/shared/IncrementButton';
+import IncrementButton from '@/src/client/shared/Counter';
 
 const ImageSection = () => {
 	const { isMobile } = useDeviceType();
@@ -78,7 +78,7 @@ const ImageSection = () => {
 
 					<div className='flex items-center justify-start lg:space-x-4 space-x-3 lg:mt-9 mt-4'>
 						<p className='font-bold'>Quantity</p>
-						<IncrementButton/>
+						<IncrementButton />
 					</div>
 
 					<div className='w-full bg-slate-200 lg:px-12 px-4 py-4 space-y-3 rounded lg:mt-10 mt-4'>
