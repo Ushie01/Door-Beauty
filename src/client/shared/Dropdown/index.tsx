@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
+import Link from 'next/link';
 
 
 type TitleProps = {
@@ -35,16 +36,18 @@ const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
 									value={{ name: value.name }}
 									key={index}>
 									{({ selected, active }) => (
-										<MenuItem
-											isActive={active}
-											isSelected={selected}
-											onClick={() => handleOptionSelect(value)}>
-											<MenuItem.Title>{value.name}</MenuItem.Title>
-											<MenuItem.Radio
+										<Link href='category'>
+											<MenuItem
+												isActive={active}
 												isSelected={selected}
-												className={selected ? 'bg-yellow-500' : 'bg-gray-200'}
-											/>
-										</MenuItem>
+												onClick={() => handleOptionSelect(value)}>
+												<MenuItem.Title>{value.name}</MenuItem.Title>
+												<MenuItem.Radio
+													isSelected={selected}
+													className={selected ? 'bg-yellow-500' : 'bg-gray-200'}
+												/>
+											</MenuItem>
+										</Link>
 									)}
 								</Dropdown.Option>
 							))}

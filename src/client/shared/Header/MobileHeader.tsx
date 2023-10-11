@@ -12,7 +12,7 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import DropDown from '../DropDown';
 import { DATA } from './constants/data';
-import { useCart } from '../hooks/useCart';
+import useCart from '../hooks/useCart';
 
 type Data = {
 	id: string;
@@ -25,7 +25,6 @@ const MobileHeader = () => {
 	const [data, setData] = useState<string | []>('');
 	const handleClick = () => setIsOpen(true);
 	const handleClose = () => setIsOpen(false);
-
 	const { cart } = useCart();
 
 	const onHandleClick = (item: Data) => {

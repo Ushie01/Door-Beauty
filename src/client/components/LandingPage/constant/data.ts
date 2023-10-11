@@ -37,7 +37,8 @@ export const PRODUCT_DATA = [
         name: 'Bigen Oz',
         type: 'Soap',
         price: '$300.00',
-        color: 'orange'
+        color: 'orange',
+        quantity: 1
     },
     {
         id: 2,
@@ -45,7 +46,9 @@ export const PRODUCT_DATA = [
         name: 'Clarol White',
         type: 'Soap | Cream',
         price: '$400.00',
-        color: 'White'
+        color: 'White',
+        quantity: 1
+
     },
     {
         id: 3,
@@ -53,7 +56,9 @@ export const PRODUCT_DATA = [
         name: 'Cream Beauty ',
         type: 'Cream',
         price: '$140.00',
-        color: 'White'
+        color: 'White',
+        quantity: 1
+
     },
     {
         id: 4,
@@ -61,7 +66,8 @@ export const PRODUCT_DATA = [
         name: 'Bigen Oz',
         type: 'Soap',
         price: '$300.00',
-        color: 'orange'
+        color: 'orange',
+        quantity: 1
     },
     {
         id: 5,
@@ -69,7 +75,8 @@ export const PRODUCT_DATA = [
         name: 'Clarol White',
         type: 'Soap | Cream',
         price: '$400.00',
-        color: 'White'
+        color: 'White',
+        quantity: 1
     },
     {
         id: 6,
@@ -77,7 +84,8 @@ export const PRODUCT_DATA = [
         name: 'Cream Beauty ',
         type: 'Cream',
         price: '$140.00',
-        color: 'White'
+        color: 'White',
+        quantity: 1
     },
     {
         id: 7,
@@ -85,7 +93,8 @@ export const PRODUCT_DATA = [
         name: 'Bigen Oz',
         type: 'Soap',
         price: '$300.00',
-        color: 'orange'
+        color: 'orange',
+        quantity: 1
     },
     {
         id: 8,
@@ -93,15 +102,17 @@ export const PRODUCT_DATA = [
         name: 'Clarol White',
         type: 'Soap | Cream',
         price: '$400.00',
-        color: 'White'
+        color: 'White',
+        quantity: 1
     },
     {
-        id: 8,
+        id: 9,
         photo: CreamBeauty ,
         name: 'Cream Beauty ',
         type: 'Cream',
         price: '$140.00',
-        color: 'White'
+        color: 'White',
+        quantity: 1
     },
 ]
 

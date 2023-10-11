@@ -4,9 +4,9 @@ import Image, { StaticImageData } from 'next/image';
 import { Button } from '@heathmont/moon-core-tw';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { PRODUCT_DATA } from '../../components/LandingPage/constant/data';
+import { Toast, ToastError } from '../hooks/useToast';
 import Link from 'next/link';
-import { AddToCart } from './AddToCartHandle';
-
 
 type DataProps = {
 	id: number;
@@ -18,8 +18,34 @@ type DataProps = {
 };
 
 const Card = ({ id, photo, name, type, price, color }: DataProps) => {
+	const [cart, setCart] = useState([]);
+	const [cartLength, setCartLength] = useState([]);
+
+	useEffect(() => {
+		const cartFromLocalStorage = JSON.parse(
+			localStorage.getItem('cart') ?? '[]'
+		);
+		setCartLength(cartFromLocalStorage);
+	}, [cart]);
+
 	const handleClick = (value: number) => {
-		AddToCart(value);
+		if (value) {
+			const selectedItemObject = PRODUCT_DATA.find((item) => item.id === value);
+			let itemsArray = JSON.parse(localStorage.getItem('cart') ?? '[]');
+			const checkSelected = itemsArray.find((item: any) => item.id === value);
+			if (!checkSelected) {
+				itemsArray.push(selectedItemObject);
+				setCart(itemsArray);
+				localStorage.setItem('cart', JSON.stringify(itemsArray));
+				Toast({
+					text: '🦄 Item successfully added to cart',
+				});
+			} else {
+				ToastError({
+					text: 'Item has been already added to cart',
+				});
+			}
+		}
 	};
 
 	return (
@@ -37,13 +63,13 @@ const Card = ({ id, photo, name, type, price, color }: DataProps) => {
 					/>
 				</Button>
 			</div>
-			{/* <Link href='#'> */}
-			<Image
-				src={photo}
-				alt='Bigen'
-				className='w-full lg:h-[400px] h-[200px]'
-			/>
-			{/* </Link> */}
+			<Link href='/detail/3'>
+				<Image
+					src={photo}
+					alt='Bigen'
+					className='w-full lg:h-[400px] h-[200px]'
+				/>
+			</Link>
 			<div className='absolute flex flex-col bottom-0 right-0 left-0 bg-white bg-opacity-70 text-white lg:px-4 px-1 transform lg:-translate-y-[-60px] -translate-y-[-180px] transition-transform duration-300 group-hover:translate-y-0'>
 				<div className='flex flex-col font-bold px-3 space-y-1'>
 					<p className='text-black mt-11'>{name}</p>

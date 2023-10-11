@@ -4,7 +4,7 @@ import CardSection from './components/CardSection';
 import Header from '../../shared/Header/Header';
 import Footer from '../../shared/Footer';
 
-const CheckOut = () => {
+const Cart = () => {
   return (
       <CheckoutContainer>
           <Header/>
@@ -14,4 +14,4 @@ const CheckOut = () => {
   )
 }
 
-export default CheckOut;
+export default Cart;

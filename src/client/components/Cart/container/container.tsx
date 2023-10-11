@@ -1,8 +1,8 @@
 type Props = {
 	children: React.ReactNode;
 };
-const CheckoutContainer = ({ children }: Props) => (
+const CartContainer = ({ children }: Props) => (
 	<div className='bg-white'>{children}</div>
 );
 
-export default CheckoutContainer;
+export default CartContainer;
