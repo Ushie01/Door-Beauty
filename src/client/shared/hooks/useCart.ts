@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-const useCart = () => {
-  const [cart, setCart] = useState([]);
+// const useCart = () => {
+//   const [cart, setCart] = useState([]);
 
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			const cartFromLocalStorage = JSON.parse(
-				localStorage.getItem('cart') || '[]'
-			);
-			setCart(cartFromLocalStorage);
-		}
-	}, []);
+// 	useEffect(() => {
+// 		if (typeof window !== 'undefined') {
+// 			const cartFromLocalStorage = JSON.parse(
+// 				localStorage.getItem('cart') || '[]'
+// 			);
+// 			setCart(cartFromLocalStorage);
+// 		}
+// 	}, []);
 
-  return {cart};
-};
+//   return {cart};
+// };
 
-export default useCart;
+// export default useCart;
 
 
 

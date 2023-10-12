@@ -16,7 +16,6 @@ const Counter = ({
 	decrementCounter,
 }: Props) => {
 
-	console.log(id, quantity)
 
 	return (
 		<div className='flex items-center justify-center lg:space-x-4 border rounded'>

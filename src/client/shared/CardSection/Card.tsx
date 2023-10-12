@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import { GenericHeart } from '@heathmont/moon-icons-tw';
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@heathmont/moon-core-tw';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { PRODUCT_DATA } from '../../components/LandingPage/constant/data';
-import { Toast, ToastError } from '../hooks/useToast';
 import Link from 'next/link';
+import useCart from '../Context/useCart';
+
 
 type DataProps = {
 	id: number;
@@ -18,34 +18,10 @@ type DataProps = {
 };
 
 const Card = ({ id, photo, name, type, price, color }: DataProps) => {
-	const [cart, setCart] = useState([]);
-	const [cartLength, setCartLength] = useState([]);
 
-	useEffect(() => {
-		const cartFromLocalStorage = JSON.parse(
-			localStorage.getItem('cart') ?? '[]'
-		);
-		setCartLength(cartFromLocalStorage);
-	}, [cart]);
-
+	const { addToCart } = useCart();
 	const handleClick = (value: number) => {
-		if (value) {
-			const selectedItemObject = PRODUCT_DATA.find((item) => item.id === value);
-			let itemsArray = JSON.parse(localStorage.getItem('cart') ?? '[]');
-			const checkSelected = itemsArray.find((item: any) => item.id === value);
-			if (!checkSelected) {
-				itemsArray.push(selectedItemObject);
-				setCart(itemsArray);
-				localStorage.setItem('cart', JSON.stringify(itemsArray));
-				Toast({
-					text: '🦄 Item successfully added to cart',
-				});
-			} else {
-				ToastError({
-					text: 'Item has been already added to cart',
-				});
-			}
-		}
+		addToCart(value);
 	};
 
 	return (

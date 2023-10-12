@@ -1,77 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Card from './Card';
-import { Button } from '@heathmont/moon-core-tw';
+import React  from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { StaticImageData } from 'next/image';
-
-
-type CartItem = {
-	id: number;
-	name: string;
-	photo: StaticImageData;
-	price: string;
-	quantity: number;
-};
+import Card from './Card';
+import EmptyCart from '../../../../assets/emptyCart.gif';
+import { Buttn } from '@/src/client/shared/Button';
+import 'react-toastify/dist/ReactToastify.css';
+import useCart from '@/src/client/shared/Context/useCart';
 
 
 const CardSection = () => {
-	const initialRender = useRef(true);
-	const [product, setProduct] = useState<CartItem[]>([]);
+  const {
+    product,
+    subPrice,
+    incrementCounter,
+    decrementCounter,
+    handleDelete,
+  } = useCart();
 
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			const cartFromLocalStorage = JSON.parse(
-				localStorage.getItem('cart') || '[]'
-			);
-			setProduct(cartFromLocalStorage);
-		}
-	}, []);
-
-	const incrementCounter = (id: number) => {
-		setProduct((prevProducts) =>
-			prevProducts.map((item) =>
-				item.id === id
-					? {
-							...item,
-							quantity: item.quantity + 1,
-					  }
-					: item
-			)
-		);
-	};
-
-	const decrementCounter = (id: number) => {
-		setProduct((prevProducts) =>
-			prevProducts.map((item) =>
-				item.id === id
-					? {
-							...item,
-							quantity: Math.max(1, item.quantity - 1),
-					  }
-					: item
-			)
-		);
-	};
-
-	const handleDelete = (id: number) => {
-		const resMsg = window.confirm(
-			'Are you sure you want to delete this item?!'
-		);
-		if (resMsg === true) {
-			const updatedCartList = product.filter(
-				(item: CartItem) => item.id !== id
-			);
-			setProduct(updatedCartList);
-		}
-	};
-
-	useEffect(() => {
-		if (initialRender.current) {
-			initialRender.current = false;
-			return;
-		}
-		window.localStorage.setItem('cart', JSON.stringify(product));
-	}, [product]);
 
 	return (
 		<div className='flex lg:flex-row flex-col lg:px-16 lg:py-12 w-full'>
@@ -80,18 +25,40 @@ const CardSection = () => {
 					<span className='text-black font-bold text-xl'>Card</span> (
 					{product.length})
 				</h1>
+
 				<div className='mt-8 space-y-6'>
-					{product.map((value: CartItem, index: number) => (
-						<div key={index}>
-							<Card
-								{...value}
-								handleDelete={handleDelete}
-								incrementCounter={incrementCounter}
-								decrementCounter={decrementCounter}
+					{product.length > 0 &&
+						product.map((value, index: number) => (
+							<div key={index}>
+								<Card
+									{...value}
+									handleDelete={handleDelete}
+									incrementCounter={incrementCounter}
+									decrementCounter={decrementCounter}
+								/>
+							</div>
+						))}
+					{product.length === 0 && (
+						<div className='flex flex-col items-center justify-center'>
+							<Image
+								src={EmptyCart}
+								alt='Empty alt'
+								height={400}
+							/>
+							<p className='text-red-500 text-3xl font-bold -mt-10'>
+								Oop! your cart is empty
+							</p>
+							<p className='font-bold text-center mt-2'>
+								Looks like you haven`t added <br /> anything to your cart yet
+							</p>
+							<Buttn
+								text='SHOP NOW'
+								link='/category'
 							/>
 						</div>
-					))}
+					)}
 				</div>
+
 				<Link
 					href='#'
 					className='text-black font-bold text-xl underline mt-16'>
@@ -103,16 +70,17 @@ const CardSection = () => {
 				<p className='text-black font-bold text-xl'>Cart Summary</p>
 				<div className='flex items-center justify-between text-gray-500'>
 					<p>Sub Total</p>
-					<p>$50.00</p>
+					<p>{`$${subPrice}`}</p>
 				</div>
 				<hr className='w-full border-gray-400' />
 				<div className='flex items-center justify-between text-gray-500'>
 					<p>Grand Price</p>
-					<p>$50.00</p>
+					<p>{`$${subPrice + (product.length * 10)}`}</p>
 				</div>
-				<Button className='flex items-center justify-center w-full text-white bg-black py-7 rounded-xl font-bold '>
-					CHECKOUT
-				</Button>
+				<Buttn
+					text='CHECKOUT'
+					link=''
+				/>
 			</div>
 		</div>
 	);
