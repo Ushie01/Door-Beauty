@@ -12,7 +12,8 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import DropDown from '../DropDown';
 import { DATA } from './constants/data';
-import useCart from '../hooks/useCart';
+import useCart from '../Context/useCart';
+
 
 type Data = {
 	id: string;
@@ -25,7 +26,7 @@ const MobileHeader = () => {
 	const [data, setData] = useState<string | []>('');
 	const handleClick = () => setIsOpen(true);
 	const handleClose = () => setIsOpen(false);
-	const { cart } = useCart();
+	const { product} = useCart();
 
 	const onHandleClick = (item: Data) => {
 		setData(item.name);
@@ -117,11 +118,11 @@ const MobileHeader = () => {
 					className='w-14 h-20'
 				/>
 				<Link
-					href='#'
+					href='/cart'
 					className=' flex items-center justify-center space-x-2'>
 					<Cart />
 					<div className='flex items-center justify-center bg-orange-500 text-white h-7 w-7 rounded-full'>
-						<p className='font-bold text-xl'>{cart.length}</p>
+						<p className='font-bold text-xl'>{product.length}</p>
 					</div>
 				</Link>
 			</div>

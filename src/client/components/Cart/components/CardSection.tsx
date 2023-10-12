@@ -60,7 +60,7 @@ const CardSection = () => {
 				</div>
 
 				<Link
-					href='#'
+					href='/'
 					className='text-black font-bold text-xl underline mt-16'>
 					Continue Shopping
 				</Link>

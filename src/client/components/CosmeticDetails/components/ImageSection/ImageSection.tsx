@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { PRODUCT_IMAGE } from '../../constant/data';
 import {
 	ControlsPlus,
-	ControlsMinus,
 	ShopCart,
 	GenericHeart,
 } from '@heathmont/moon-icons-tw';
@@ -11,12 +10,24 @@ import { Button } from '@heathmont/moon-core-tw';
 import Heart from '../../../Svg/Heart';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import Counter from '@/src/client/shared/Counter';
+import CreamBeauty from './../../../../../assets/cream_beauty.jpg';
+import useCart from '@/src/client/shared/Context/useCart';
+
 
 const ImageSection = () => {
 	const { isMobile } = useDeviceType();
 	const [selectedImage, setSelectedImage] = useState<string | null>(null);
-	const handleClick = (image: string) => {
-		setSelectedImage(image);
+	const handleClick = (image: string) => {setSelectedImage(image);};
+	const { incrementCounter, decrementCounter } = useCart();
+
+	const prodataData = {
+		id: 3,
+		photo: CreamBeauty,
+		name: 'Cream Beauty ',
+		type: 'Cream',
+		price: '$140.00',
+		color: 'White',
+		quantity: 1,
 	};
 
 	return (
@@ -78,7 +89,12 @@ const ImageSection = () => {
 
 					<div className='flex items-center justify-start lg:space-x-4 space-x-3 lg:mt-9 mt-4'>
 						<p className='font-bold'>Quantity</p>
-						{/* <Counter /> */}
+						<Counter
+							id={prodataData.id}
+							quantity={prodataData.quantity}
+							incrementCounter={incrementCounter}
+							decrementCounter={decrementCounter}
+						/>
 					</div>
 
 					<div className='w-full bg-slate-200 lg:px-12 px-4 py-4 space-y-3 rounded lg:mt-10 mt-4'>

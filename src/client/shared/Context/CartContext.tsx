@@ -29,7 +29,14 @@ export const CartContext = createContext<CartContextType | undefined>(
 	undefined
 );
 
-export const CartProvider: React.FC = ({ children }: any) => {
+type CartProviderProps = {
+	children: React.ReactNode;
+};
+
+
+export const CartProvider: React.FC<CartProviderProps> = ({
+	children,
+}: CartProviderProps) => {
 	const initialRender = useRef(true);
 	const [product, setProduct] = useState<CartItem[]>([]);
 	const [subPrice, setSubPrice] = useState<number>(0);

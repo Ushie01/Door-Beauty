@@ -8,13 +8,13 @@ import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 const CategoryItems = () => {
 	const { isMobile } = useDeviceType();
 	return (
-		<div className='flex lg:p-12 p-0 lg:px-0 px-4'>
+		<div className='flex lg:p-12 p-0 lg:px-12 px-4'>
 			{isMobile === false && (
 				<div className='lg:w-2/12'>
 					<Filter />
 				</div>
 			)}
-			<div className='grid lg:grid-cols-3 grid-cols-2 gap-3 items-center justify-center w-full lg:mt-0 mt-4 lg:space-y-0 lg:pl-16 pl-0 lg:px-0'>
+			<div className='grid lg:grid-cols-3 grid-cols-2 gap-3 items-center justify-center w-full lg:mt-0 mt-4 lg:space-y-0 lg:pl-16 pl-0'>
 				{PRODUCT_DATA?.map((value, index) => (
 					<div key={index}>
 						<Card
