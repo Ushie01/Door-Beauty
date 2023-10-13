@@ -1,19 +1,10 @@
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image  from 'next/image';
 import { GenericDelete } from '@heathmont/moon-icons-tw';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import Counter from '@/src/client/shared/Counter';
+import { Props } from '../constant/data';
 
-type Props = {
-	id: number;
-	name: string;
-	photo: StaticImageData | undefined;
-	price: string;
-	quantity: number;
-	incrementCounter: (id: number) => void;
-	decrementCounter: (id: number) => void;
-	handleDelete: (id: number) => void;
-};
 
 const Card = ({
 	name,
@@ -27,7 +18,6 @@ const Card = ({
 }: Props) => {
 	
 	const { isMobile } = useDeviceType();
-
 	const priceNumber = parseFloat(price.replace(/[^0-9.-]+/g, ''));
 	const totalPrice = priceNumber * quantity;
 	const totalPriceString = totalPrice.toFixed(2);
