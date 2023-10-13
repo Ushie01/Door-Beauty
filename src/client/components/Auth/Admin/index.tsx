@@ -4,6 +4,7 @@ import Card from "./card";
 import Headerdash from "./headerdash";
 import Navbar from "./navbar";
 import Salescard from "./salescard";
+import LineChart from "./linechart";
 
 const Admin = () => {
   return (
@@ -11,7 +12,7 @@ const Admin = () => {
       <Headerdash />
       <div className="flex space-x-8 bg-gray-100 ">
         <Navbar />
-        <div className="pl-64">
+        <div className="pl-72">
           <div className=" bg-gray-300 mt-32 pt-4 px-6 rounded-lg ">
             <div>
               <h2 className=" text-2xl font-bold ">Dashboard</h2>
@@ -30,7 +31,7 @@ const Admin = () => {
                 </div>
               </section>
             </div>
-            <section className=" flex space-x-8 mt-5">
+            <section className=" flex justify-between px-12 mt-5">
               <div>
                 <h2 className=" font-bold text-3xl mb-4 ">Sales</h2>
                 <section className="flex flex-col space-y-4">
@@ -42,7 +43,7 @@ const Admin = () => {
                       </h1>
                     </div>
                     <div className="flex w-72 ">
-                      <div className=" w-56 h-3 p-1 rounded-l-lg bg-yellow-400 "></div>
+                      <div className=" w-56 h-3 p-1 rounded-l-lg bg-orange-400 "></div>
                       <div className="w-16 rounded-r-lg p-1 bg-yellow-100 "></div>
                     </div>
                   </div>
@@ -54,7 +55,7 @@ const Admin = () => {
                       </h1>
                     </div>
                     <div className="flex w-72 ">
-                      <div className=" w-56 h-3 p-1 rounded-l-lg bg-yellow-400 "></div>
+                      <div className=" w-56 h-3 p-1 rounded-l-lg bg-orange-400 "></div>
                       <div className="w-16 rounded-r-lg p-1 bg-yellow-100 "></div>
                     </div>
                   </div>
@@ -66,7 +67,7 @@ const Admin = () => {
                       </h1>
                     </div>
                     <div className="flex w-72 ">
-                      <div className=" w-56 h-3 p-1 rounded-l-lg bg-yellow-400 "></div>
+                      <div className=" w-56 h-3 p-1 rounded-l-lg bg-orange-400 "></div>
                       <div className="w-16 rounded-r-lg p-1 bg-yellow-100 "></div>
                     </div>
                   </div>
@@ -80,23 +81,34 @@ const Admin = () => {
                     percent="100%"
                   />
                 </div>
+                <div>
+                  <Salescard
+                    title="Average Sales"
+                    content="Year"
+                    percent="100%"
+                  />
+                      <div  className=" bg-white mt-4 w-96 h-52 p-8 rounded-lg flex flex-col space-y-4 ">
+                        <h2  className=" font-bold uppercase text-2xl ">Sales</h2>
+                        <h2 className="font-semibold text-orange-400 text-6xl">$0</h2>
+                </div>
+                </div>
               </div>
             </section>
             <section className="mt-12">
               <h4 className="font-bold mb-4 text-3xl ">
                 NEW QUERIES FOR DELIVERIES
               </h4>
-              <Image src="/graph.png" alt="graph1" width={900} height={900} />
+             {/* <LineChart/> */}
             </section>
             <section className="mt-6">
               <h4 className=" font-bold mb-4 text-3xl ">
-                NEW QUERIES FOR VENDIND
+                NEW QUERIES FOR VENDORS
               </h4>
-              <Image src="/graph2.png" alt="graph2" width={900} height={900} />
+              {/* <LineChart/> */}
             </section>
             <section className=" mb-4 mt-6">
               <h4 className=" font-bold text-3xl ">NEW QUERIES FOR DRIVERS</h4>
-              <Image src="/graph3.png" alt="graph3" width={900} height={900} />
+             {/* <LineChart/> */}
             </section>
           </div>
         </div>
