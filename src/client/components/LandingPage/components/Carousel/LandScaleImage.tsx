@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const LandScaleImage = () => {
 	const CarouselImages = [
-				<Image
+		<Image
 			key='image-key'
 			src={landScaleImage3}
 			alt='LandScale'
@@ -28,7 +28,6 @@ const LandScaleImage = () => {
 			autoSlideDelay={6000}
 			scrollTo={1}
 			step={1}>
-				
 			<Carousel.Reel>
 				{CarouselImages?.map((value, index) => (
 					<Carousel.Item
