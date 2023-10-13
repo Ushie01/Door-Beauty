@@ -1,26 +1,16 @@
-import Image from 'next/image';
 import React from 'react';
-import Logo from '../../../assets/logo.png';
-import { Button } from '@heathmont/moon-core-tw';
-import FacebookIcon from '../Svg/facebook';
-import GoogleIcon from '../Svg/google';
-import LoginImg from '../../../assets/LoginImg.jpg';
-import Link from 'next/link';
+import SocialLogin from './components/SocialHandle';
+import SideImage from './components/SideImage';
+import OrContinueWith from './components/OrContinueWith';
+import LoginButton from './components/Button';
+import Head from './components/Head';
+
 
 const SignIn = () => {
 	return (
 		<div className='flex items-center justify-center w-full h-full'>
-			<div className='px-6 py-12 w-1/2'>
-				<div>
-					<Image
-						className='mx-auto h-40 w-auto'
-						src={Logo}
-						alt='Logo alt'
-					/>
-					<h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
-						Sign in to your account
-					</h2>
-				</div>
+			<div className='px-6 py-12 lg:w-1/2 w-full'>
+				<Head title='Sign in to your account' />
 
 				<div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
 					<form
@@ -51,11 +41,12 @@ const SignIn = () => {
 								<div className='text-sm'>
 									<a
 										href='#'
-										className='font-semibold text-indigo-600 hover:text-indigo-500'>
+										className='font-semibold text-lightOrange-50'>
 										Forgot password?
 									</a>
 								</div>
-							</div>
+              </div>
+              
 							<div className='mt-2'>
 								<input
 									id='password'
@@ -68,63 +59,16 @@ const SignIn = () => {
 							</div>
 						</div>
 
-						<div>
-							<Link href='/'>
-								<Button
-									type='submit'
-									className='flex w-full justify-center  rounded-xl bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
-									Sign in
-								</Button>
-							</Link>
-						</div>
+						<LoginButton
+							text='Sign In'
+							link='/'
+						/>
 					</form>
-
-					<div className='flex items-center justify-between mt-4'>
-						<hr className='border w-1/4' />
-						<p className='text-black w-2/4 text-center font-bold'>
-							Or continue with
-						</p>
-						<hr className='border w-1/4' />
-					</div>
-					<div className='flex items-center mt-8 w-full'>
-						<Button
-							type='submit'
-							className='flex justify-center w-full  mr-1 rounded-xl border-2 border-black'>
-							<GoogleIcon
-								width='27'
-								height='27'
-							/>
-							<p>Google</p>
-						</Button>
-						<Button
-							type='submit'
-							className='flex w-full justify-center ml-1 rounded-xl bg-blue-600 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm '>
-							<FacebookIcon
-								width='27'
-								height='27'
-								color='white'
-							/>
-							<p>Facebook</p>
-						</Button>
-					</div>
-					<p className='mt-10 text-center text-sm text-gray-500'>
-						Don`t have an account?
-						<Link
-							href='/signup'
-							className='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'>
-							{' '}
-							Sign up
-						</Link>
-					</p>
+					<OrContinueWith />
+					<SocialLogin />
 				</div>
 			</div>
-			<div className='w-1/2'>
-				<Image
-					src={LoginImg}
-					alt='login alt'
-					className='w-full h-full'
-				/>
-			</div>
+			<SideImage />
 		</div>
 	);
 };

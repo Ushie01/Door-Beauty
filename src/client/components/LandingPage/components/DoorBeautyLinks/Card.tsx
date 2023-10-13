@@ -1,14 +1,15 @@
 import { Button } from '@heathmont/moon-core-tw';
 import React, { ReactNode } from 'react';
-import { ArrowsRight } from '@heathmont/moon-icons-tw';
+import ModelInput from '@/src/client/shared/Model/ModelInput';
 
 type Props = {
 	title: string;
 	description: string;
 	icon: ReactNode;
+	modalTitle: string;
 };
 
-const Card = ({ title, description, icon }: Props) => {
+const Card = ({ title, description, icon, modalTitle }: Props) => {
 	return (
 		<div className='flex items-start justify-center h-max px-5'>
 			<div className='h-24 p-2 lg:pt-0 pt-16'>{icon}</div>
@@ -16,13 +17,7 @@ const Card = ({ title, description, icon }: Props) => {
 				<p className='text-xl font-bold'>{title}</p>
 				<p>
 					{description}
-					<Button className='bg-orange-400 rounded-xl p-1 mt-4'>
-						<ArrowsRight
-							height={34}
-							width={34}
-							color='white'
-						/>
-					</Button>
+					<ModelInput modalTitle={modalTitle} />
 				</p>
 			</div>
 		</div>

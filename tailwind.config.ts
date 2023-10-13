@@ -11,7 +11,13 @@ module.exports = {
 		require("@heathmont/moon-core-tw/lib/private/presets/ds-moon-preset"),
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				lightOrange: {
+					50: '#E69732'
+				}
+			}
+		},
 	},
 	plugins: [require('tailwindcss-rtl')],
 };

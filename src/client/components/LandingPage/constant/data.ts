@@ -129,8 +129,8 @@ export const STORE_DATA = [
 ];
 
 export const BAEUTY_DATA = [
-    { title: 'Become a Driver', description: 'Sign up today and become a driver for any of out store branch within the country of your choice.', icon: SportSpeedway },
-    { title: 'Become a Vendor', description: 'Sign up today and become a vendor and own your store, monitor your business and flow of cash.', icon: ShopBank },
-    { title: 'Discount and Savings', description: 'For a limited time, sign up for the door beauty store membership and get 20% off.', icon: ShopCryptoCoin },
-    { title: 'Looking for Something?', description: "Don't see what you're looking for? we recommand a product or store.", icon: ChatCommentBubbleQuestionMark}
+    { modalTitle: 'Register as a Driver', title: 'Become a Driver', description: 'Sign up today and become a driver for any of out store branch within the country of your choice.', icon: SportSpeedway },
+    { modalTitle: 'Register as a Vendor', title: 'Become a Vendor', description: 'Sign up today and become a vendor and own your store, monitor your business and flow of cash.', icon: ShopBank },
+    { modalTitle: 'Discount and Savings', title: 'Discount and Savings', description: 'For a limited time, sign up for the door beauty store membership and get 20% off.', icon: ShopCryptoCoin },
+    { modalTitle: 'Here are list', title: 'Looking for Something?', description: "Don't see what you're looking for? we recommand a product or store.", icon: ChatCommentBubbleQuestionMark}
 ]

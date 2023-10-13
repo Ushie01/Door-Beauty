@@ -28,6 +28,7 @@ const DoorBeautyLinks = () => {
 											color='black'
 										/>
 									}
+									modalTitle={val.modalTitle}
 								/>
 							</div>
 						))}

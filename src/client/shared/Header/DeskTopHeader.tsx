@@ -27,7 +27,7 @@ const DeskTopHeader = () => {
 					<SearchInput />
 					<div className='flex items-center justify-center text-black space-x-5'>
 						<Link
-							href='#'
+							href='/login'
 							className='flex items-center justify-center space-x-2'>
 							<Avatar
 								width='17'
