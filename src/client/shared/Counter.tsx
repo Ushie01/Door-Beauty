@@ -1,10 +1,10 @@
+import React  from 'react';
 import { Button } from '@heathmont/moon-core-tw';
 import { ControlsMinus, ControlsPlus } from '@heathmont/moon-icons-tw';
-import React, { useState, useEffect } from 'react';
 
 type Props = {
 	id: number;
-	quantity: number;
+	quantity?: number;
 	incrementCounter: (id: number) => void;
 	decrementCounter: (id: number) => void;
 };
@@ -15,8 +15,6 @@ const Counter = ({
 	incrementCounter,
 	decrementCounter,
 }: Props) => {
-
-
 	return (
 		<div className='flex items-center justify-center lg:space-x-4 border rounded'>
 			<Button>

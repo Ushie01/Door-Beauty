@@ -1,37 +1,45 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { PRODUCT_IMAGE } from '../../constant/data';
-import {
-	ControlsPlus,
-	ShopCart,
-	GenericHeart,
-} from '@heathmont/moon-icons-tw';
+import { ControlsPlus, ShopCart, GenericHeart } from '@heathmont/moon-icons-tw';
 import { Button } from '@heathmont/moon-core-tw';
 import Heart from '../../../Svg/Heart';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import Counter from '@/src/client/shared/Counter';
 import CreamBeauty from './../../../../../assets/cream_beauty.jpg';
 import useCart from '@/src/client/shared/Context/useCart';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ImageSection = () => {
 	const { isMobile } = useDeviceType();
 	const [selectedImage, setSelectedImage] = useState<string | null>(null);
-	const handleClick = (image: string) => {setSelectedImage(image);};
-	const { incrementCounter, decrementCounter } = useCart();
-
-	const prodataData = {
-		id: 3,
-		photo: CreamBeauty,
-		name: 'Cream Beauty ',
-		type: 'Cream',
-		price: '$140.00',
-		color: 'White',
+	const handleClick = (image: string) => {
+		setSelectedImage(image);
+	};
+	const { product, incrementCounter, decrementCounter, addToCart } = useCart();
+	const productData = {
+		id: 8,
+		// photo: CreamBeauty,
+		// name: 'Cream Beauty ',
+		// type: 'Cream',
+		// price: '$140.00',
+		// color: 'White',
 		quantity: 1,
+	};
+	const productQuantity = product && product.find((item) => item.id === productData.id);
+	// console.log(productQuantity.quantity)
+
+	// console.log(productData.quantity);
+	const handleAddToCart = (value: number) => {
+		addToCart(value);
 	};
 
 	return (
 		<div className='py-6 lg:px-16 p-4'>
+			<div>
+				<ToastContainer />
+			</div>
 			<h1 className='text-black lg:block hidden'>
 				Home Page / Woman / Creme Beauty
 			</h1>
@@ -90,8 +98,8 @@ const ImageSection = () => {
 					<div className='flex items-center justify-start lg:space-x-4 space-x-3 lg:mt-9 mt-4'>
 						<p className='font-bold'>Quantity</p>
 						<Counter
-							id={prodataData.id}
-							quantity={prodataData.quantity}
+							id={productData.id}
+							quantity={productQuantity ? productQuantity?.quantity : 1}
 							incrementCounter={incrementCounter}
 							decrementCounter={decrementCounter}
 						/>
@@ -116,7 +124,9 @@ const ImageSection = () => {
 					</div>
 
 					<div className='flex flex-row lg:mt-10 mt-4 lg:space-x-4 space-x-2 font-thin'>
-						<Button className='flex items-center justify-center bg-orange-500 w-full text-white h-12 border rounded shadow-xl'>
+						<Button
+							onClick={() => handleAddToCart(productData.id)}
+							className='flex items-center justify-center bg-orange-500 w-full text-white h-12 border rounded shadow-xl'>
 							<ShopCart
 								height={28}
 								width={28}

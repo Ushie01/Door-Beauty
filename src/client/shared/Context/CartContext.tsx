@@ -8,6 +8,7 @@ import React, {
 import { PRODUCT_DATA } from '../../components/LandingPage/constant/data';
 import { Toast, ToastError } from '../hooks/useToast';
 
+
 type CartItem = {
 	id: number;
 	name: string;
