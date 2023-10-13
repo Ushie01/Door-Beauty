@@ -25,7 +25,7 @@ export const FOOTER_DATA = [
 ];
 
 export const socialIcons = [
-	FacebookIcon(),
+	FacebookIcon({height:'34', width:'34', color:'gray'}),
 	InstagramIcon(),
 	LinkedinIcon(),
 	TiktokIcon(),
