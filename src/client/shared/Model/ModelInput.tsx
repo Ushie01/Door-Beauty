@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Modal, Button, IconButton } from '@heathmont/moon-core-tw';
 import { ArrowsRight, ControlsCloseSmall } from '@heathmont/moon-icons-tw';
-import Form from '../../components/SignIn/components/Form';
+import Form from '../../components/Auth/SignIn/components/Form';
 
 type Props = {
 	modalTitle: string;
+	index: string;
 };
 
-const ModelInput = ({ modalTitle }: Props) => {
+const ModelInput = ({ modalTitle, index }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const closeModal = () => setIsOpen(false);
 	const openModal = () => setIsOpen(true);
@@ -39,9 +40,11 @@ const ModelInput = ({ modalTitle }: Props) => {
 							<ControlsCloseSmall className='text-moon-24' />
 						</IconButton>
 					</div>
+
 					<div className='p-4'>
-						<Form buttonMadeVisible={false} />
+						<Form />
 					</div>
+				
 					<div className='flex gap-2 p-4 justify-end pt-2'>
 						<Button
 							variant='outline'
