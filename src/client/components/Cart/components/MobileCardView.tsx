@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { Props } from '../constant/data';
-import { GenericDelete } from '@heathmont/moon-icons-tw';
 import Counter from '@/src/client/shared/Counter';
 import Image from 'next/image';
 import useTotalPrice from './useTotalPrice';
+import useModalConfirmation from '@/src/client/shared/hooks/useModelConfirmation';
 
 const MobileCardView = ({
 	name,
@@ -15,8 +15,9 @@ const MobileCardView = ({
 	decrementCounter,
 	handleDelete,
 }: Props) => {
-    const { totalPrice } = useTotalPrice(price, quantity);
-    
+	const { totalPrice } = useTotalPrice(price, quantity);
+	const { ModalComponent, isButtonClicked } = useModalConfirmation();
+
 	return (
 		<div>
 			<div className='flex flex-col items-center space-y-3 w-full'>
@@ -43,12 +44,11 @@ const MobileCardView = ({
 						incrementCounter={incrementCounter}
 						decrementCounter={decrementCounter}
 					/>
-					<button>
-						<GenericDelete
-							className='h-10 w-10'
-							onClick={() => handleDelete(id)}
-						/>
-					</button>
+					<ModalComponent
+						id={id}
+						handleDelete={handleDelete}
+						isButtonClicked={isButtonClicked}
+					/>
 				</div>
 			</div>
 			<hr className='border-gray-300 my-10' />
@@ -56,4 +56,4 @@ const MobileCardView = ({
 	);
 };
 
-export default MobileCardView
+export default MobileCardView;

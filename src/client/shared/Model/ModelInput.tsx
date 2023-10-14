@@ -5,10 +5,10 @@ import Form from '../../components/Auth/SignIn/components/Form';
 
 type Props = {
 	modalTitle: string;
-	index: string;
+	// index: string;
 };
 
-const ModelInput = ({ modalTitle, index }: Props) => {
+const ModelInput = ({ modalTitle }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const closeModal = () => setIsOpen(false);
 	const openModal = () => setIsOpen(true);
@@ -44,18 +44,20 @@ const ModelInput = ({ modalTitle, index }: Props) => {
 					<div className='p-4'>
 						<Form />
 					</div>
-				
-					<div className='flex gap-2 p-4 justify-end pt-2'>
+
+
+
+					<div className='flex flex-col w-full space-y-4 p-4'>
+						<Button
+							onClick={closeModal}
+							className='bg-orange-500 text-white rounded-xl w-full'>
+							Create
+						</Button>
 						<Button
 							variant='outline'
 							onClick={closeModal}
-							className='bg-black text-white rounded-xl'>
+							className='bg-black text-white rounded-xl w-full'>
 							Cancel
-						</Button>
-						<Button
-							onClick={closeModal}
-							className='bg-orange-500 text-white rounded-xl'>
-							Create
 						</Button>
 					</div>
 				</Modal.Panel>

@@ -17,18 +17,18 @@ type CartItem = {
 	photo: StaticImageData;
 };
 
-export type CartContextType = {
+
+type CartContextType = {
 	addToCart: (id: number) => void;
 	product: CartItem[];
 	subPrice: number;
 	incrementCounter: (id: number) => void;
 	decrementCounter: (id: number) => void;
-	handleDelete: (id: number) => void;
+	handleDelete: (params: { id: number; isButtonClicked: boolean }) => void;
 };
 
-export const CartContext = createContext<CartContextType | undefined>(
-	undefined
-);
+
+export const CartContext = createContext<CartContextType | undefined>(undefined);
 
 type CartProviderProps = {
 	children: React.ReactNode;
@@ -107,9 +107,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({
 		}
 	};
 
-	const handleDelete = (id: number) => {
-		const resMsg = window.confirm('Are you sure you want to delete this item?');
-		if (resMsg) {
+	const handleDelete = ({id,isButtonClicked}: {id: number; isButtonClicked: boolean;}) => {
+		if (isButtonClicked) {
+			console.log(isButtonClicked);
 			const updatedCartList = product.filter((item) => item.id !== id);
 			console.log(updatedCartList);
 			setProduct([...updatedCartList]);

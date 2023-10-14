@@ -8,5 +8,5 @@ export type Props = {
 	quantity: number;
 	incrementCounter: (id: number) => void;
 	decrementCounter: (id: number) => void;
-	handleDelete: (id: number) => void;
+	handleDelete: (params: { id: number; isButtonClicked: boolean }) => void;
 };

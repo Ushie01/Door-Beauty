@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import { Props } from '../constant/data';
 import useTotalPrice from './useTotalPrice';
+import useModalConfirmation from '@/src/client/shared/hooks/useModelConfirmation';
 
 const DeskTopCardView = ({
 	name,
@@ -16,8 +17,9 @@ const DeskTopCardView = ({
 	handleDelete,
 }: Props) => {
 	const { totalPrice } = useTotalPrice(price, quantity);
+	const { ModalComponent, isButtonClicked } = useModalConfirmation();
 
-	return (
+    return (
 		<div className='flex items-center justify-between pr-12'>
 			<div className='flex items-center justify-start space-x-5'>
 				{photo?.src && (
@@ -39,12 +41,11 @@ const DeskTopCardView = ({
 				decrementCounter={decrementCounter}
 			/>
 			<p className='text-gray-700'>{`$${totalPrice}`}</p>
-			<button>
-				<GenericDelete
-					className='h-10 w-10'
-					onClick={() => handleDelete(id)}
-				/>
-			</button>
+			<ModalComponent
+				id={id}
+				handleDelete={handleDelete}
+				isButtonClicked={isButtonClicked}
+			/>
 		</div>
 	);
 };
