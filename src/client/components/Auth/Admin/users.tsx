@@ -63,7 +63,7 @@ const Home = () => {
       },
       {
         Header: 'Action',
-        accessor: 'action', // You can use 'status' as the accessor, or any other valid accessor in MyData
+        accessor: 'action', 
         Cell: ({ row }: { row: Row<MyData> }) => (
           <button onClick={() => toggleTabView(row)}>Action</button>
         ),
