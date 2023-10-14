@@ -6,9 +6,23 @@ import Headerdash from "./headerdash";
 import Navbar from "./navbar";
 import data from './MOCK_DATA.json'
 
+interface TabViewRows {
+  [key: string]: boolean;
+}
+
+interface MyData {
+  serial_number: number;
+  full_name: string;
+  email: string;
+  contact: string;
+  date: string;
+  status: string;
+}
+
 
 const Home = () => {
-  const [tabViewRows, setTabViewRows] = useState({});
+  const [tabViewRows, setTabViewRows] = useState<TabViewRows>({});
+
 
   const toggleTabView = (row: { id: string | number; }) => {
     setTabViewRows((prevState) => ({
@@ -20,7 +34,7 @@ const Home = () => {
 
   
 
-  const columns = useMemo(
+  const columns: Column<MyData>[] = useMemo(
     () => [
       {
         Header: 'S/N',
@@ -47,16 +61,16 @@ const Home = () => {
         accessor: 'status',
       },
       {
-        Header: "Action",
-        accessor:"id",
-        Cell: ({ row }) => (
+        Header: 'Action',
+        accessor: 'status', // You can use 'status' as the accessor, or any other valid accessor in MyData
+        Cell: ({ row }: { row: Row<MyData> }) => (
           <button onClick={() => toggleTabView(row)}>Action</button>
         ),
-        
       },
     ],
     []
   );
+  
 
   
   const options = {
@@ -67,16 +81,23 @@ const Home = () => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
+   //@ts-ignore 
     page,
+    //@ts-ignore 
     nextPage,
+    //@ts-ignore 
     previousPage,
+    //@ts-ignore 
     canNextPage,
+    //@ts-ignore 
     canPreviousPage,
+    //@ts-ignore 
     pageOptions,
     state,
     prepareRow,
-  } = useTable({columns, data }, usePagination);
+  } = useTable({ columns, data: data as MyData[] }, usePagination);
 
+  //@ts-ignore 
   const { pageIndex } = state;
 
   return (
@@ -108,14 +129,14 @@ const Home = () => {
             ))}
           </thead>
           <tbody className="bg-orange-50" {...getTableBodyProps()}>
-            {page.map((row) => {
+            {page.map((row: any) => {
               prepareRow(row);
               return (
                 <tr className="relative"
                   {...row.getRowProps()}
                   style={{ borderBottom: "1px solid #ccc" }}
                 >
-                  {row.cells.map((cell) => {
+                  {row.cells.map((cell: any) => {
                     return (
                       <td
                         {...cell.getCellProps()}

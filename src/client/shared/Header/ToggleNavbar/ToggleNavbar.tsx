@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { DATA } from '../constants/data';
-import DropDown from '../../Dropdown/DropDown';
+import DropDown from '../../Dropdown/Dropdown';
 
 type Data = {
 	id: string;

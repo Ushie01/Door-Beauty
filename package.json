@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heathmont/moon-core-tw": "^10.10.0",
+    "@reduxjs/toolkit": "^1.9.7",
     "@tanstack/react-table": "^8.10.6",
     "apexcharts": "^3.43.0",
     "next": "latest",
