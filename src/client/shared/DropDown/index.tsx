@@ -10,7 +10,7 @@ type TitleProps = {
 };
 
 
-const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
+const DropdownText = ({ title, arrayTitle, setLink }: TitleProps) => {
 	const [option, setOption] = useState<{ name: string } | null>(null);
 	const handleOptionSelect = (selectedLink: { name: string }) => {
 		setOption(selectedLink);
@@ -59,4 +59,4 @@ const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
 	);
 };
 
-export default DropDown;
+export default DropdownText;

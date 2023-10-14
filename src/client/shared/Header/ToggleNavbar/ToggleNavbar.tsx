@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { DATA } from '../constants/data';
-import DropDown from '../../DropDown';
+import DropdownText from '../../DropDown';
 
 type Data = {
 	id: string;
@@ -31,7 +31,7 @@ const ToggleNavbar = () => {
 							<div>
 								{value.data
 									? value.data && (
-											<DropDown
+											<DropdownText
 												title={value.name}
 												arrayTitle={value.data}
 												setLink={setLink}

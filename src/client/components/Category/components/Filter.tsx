@@ -3,7 +3,7 @@ import { GenericBurgerZig } from '@heathmont/moon-icons-tw';
 import FlexWidthInput from '../../../shared/Input/FlexWidthInput';
 import { BEST_SELLERS, BRANDS, CATEGORY, PRICE } from '../constant/data';
 import CheckBox from '@/src/client/shared/Checkbox';
-import DropDown from '../../../shared/DropDown';
+import DropdownText from '../../../shared/DropDown';
 
 const Filter = () => {
 	const [option, setOption] = useState<string | []>('');
@@ -33,7 +33,7 @@ const Filter = () => {
 			<div className='-mt-3'>
 				<p className='font-bold'>PRICE</p>
 				<div className='border border-1 px-1 mt-3 py-3'>
-					<DropDown
+					<DropdownText
 						title='$1 - $10'
 						arrayTitle={PRICE}
 						setLink={setOption}
@@ -46,7 +46,7 @@ const Filter = () => {
 			<div className='-mt-3'>
 				<p className='font-bold'>BEST SELLERS</p>
 				<div className='border border-1 px-1 mt-3 py-3'>
-					<DropDown
+					<DropdownText
 						title='BEST_SELLERS'
 						arrayTitle={BEST_SELLERS}
 						setLink={setOption}

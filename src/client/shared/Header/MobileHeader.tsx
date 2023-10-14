@@ -9,7 +9,7 @@ import Link from 'next/link';
 import SearchInput from '../Input/SearchInput';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
-import DropDown from '../DropDown';
+import DropdownText from '../DropDown';
 import { DATA, FLAG_DATA_ARRAY } from './constants/data';
 import useCart from '../Context/useCart';
 import DropdownImage from '../DropDown/DropdownImage';
@@ -91,7 +91,7 @@ const MobileHeader = () => {
 									{value.data ? (
 										value.data && (
 											<div className='flex flex-col space-y-4 mt-4 text-md'>
-												<DropDown
+												<DropdownText
 													title={value.name}
 													arrayTitle={value.data}
 													setLink={setData}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DropDown from '@/src/client/shared/DropDown';
+import DropdownText from '@/src/client/shared/DropDown';
 import { people } from '@/src/client/shared/Header/constants/data';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import { Button, Drawer, IconButton } from '@heathmont/moon-core-tw';
@@ -57,7 +57,7 @@ const RouteDisplay = () => {
 					<p>110 Items</p>
 				</div>
 				<div className='border-2 rounded p-1'>
-					<DropDown
+					<DropdownText
 						title='Sort by Order'
 						arrayTitle={people}
 						setLink={setOption}
