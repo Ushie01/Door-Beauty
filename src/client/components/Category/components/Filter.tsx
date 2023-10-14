@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { GenericBurgerZig } from '@heathmont/moon-icons-tw';
 import FlexWidthInput from '../../../shared/Input/FlexWidthInput';
-import { BEST_SELLERS, BRANDS, CATEGORY, PRICE } from '../constant/data';
+import { BEST_SELLERS, BRANDS, PRICE } from '../constant/data';
 import CheckBox from '@/src/client/shared/Checkbox';
-import DropdownText from '../../../shared/DropDown';
+import DropdownText from '../../../shared/Dropdown';
 
 const Filter = () => {
 	const [option, setOption] = useState<string | []>('');

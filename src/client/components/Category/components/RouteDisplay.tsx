@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DropdownText from '@/src/client/shared/DropDown';
+import DropdownText from '@/src/client/shared/Dropdown';
 import { people } from '@/src/client/shared/Header/constants/data';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import { Button, Drawer, IconButton } from '@heathmont/moon-core-tw';
@@ -26,7 +26,7 @@ const RouteDisplay = () => {
 					/>
 					<p>Filter</p>
 				</button>
-				
+
 				<Drawer
 					open={isOpen}
 					setOpen={setIsOpen}>

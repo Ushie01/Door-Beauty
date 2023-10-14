@@ -6,7 +6,7 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
-import DropdownImage from '../DropDown/DropdownImage';
+import DropdownImage from '../Dropdown/DropdownImage';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
 import useCart from '../Context/useCart';
 import { FLAG_DATA_ARRAY } from './constants/data';

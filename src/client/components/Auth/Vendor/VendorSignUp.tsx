@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CARD_DATA_ARRAY } from '@/src/client/shared/Header/constants/data';
 import InputText from '@/src/client/shared/Input/InputText';
-import DropdownImage from '../../../shared/DropDown/DropdownImage';
+import DropdownImage from '../../../shared/Dropdown/DropdownImage';
 
 const VendorSignUp = () => {
 	const [agreeTerms, setAgreeTerms] = useState(false);
@@ -103,12 +103,13 @@ const VendorSignUp = () => {
 				/>
 				<label
 					className='form-check-label'
-					htmlFor='agreeTermsCheckbox'> I agree to the terms and conditions
+					htmlFor='agreeTermsCheckbox'>
+					{' '}
+					I agree to the terms and conditions
 				</label>
-      </div>
+			</div>
 
-      <hr className='w-full border mt-8' />
-      
+			<hr className='w-full border mt-8' />
 		</div>
 	);
 };
