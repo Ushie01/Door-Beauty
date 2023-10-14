@@ -1,7 +1,5 @@
-import DropDownImage from '@/src/client/shared/DropDown/DropdownImage';
-import { CARD_DATA_ARRAY } from '@/src/client/shared/Header/constants/data';
-import InputText from '@/src/client/shared/Input/InputText';
 import React from 'react';
+import InputText from '@/src/client/shared/Input/InputText';
 
 const DriverSignUp = () => {
 	return (
