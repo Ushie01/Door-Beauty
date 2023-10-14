@@ -17,6 +17,7 @@ interface MyData {
   contact: string;
   date: string;
   status: string;
+  action: string;
 }
 
 
@@ -62,7 +63,7 @@ const Home = () => {
       },
       {
         Header: 'Action',
-        accessor: 'status', // You can use 'status' as the accessor, or any other valid accessor in MyData
+        accessor: 'action', // You can use 'status' as the accessor, or any other valid accessor in MyData
         Cell: ({ row }: { row: Row<MyData> }) => (
           <button onClick={() => toggleTabView(row)}>Action</button>
         ),
