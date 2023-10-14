@@ -18,7 +18,7 @@ type CartItem = {
 };
 
 
-type CartContextType = {
+export type CartContextType = {
 	addToCart: (id: number) => void;
 	product: CartItem[];
 	subPrice: number;

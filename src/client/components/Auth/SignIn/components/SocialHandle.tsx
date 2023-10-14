@@ -1,8 +1,8 @@
 import { Button } from '@heathmont/moon-core-tw';
 import React from 'react';
-import FacebookIcon from '../../Svg/facebook';
 import Link from 'next/link';
-import GoogleIcon from '../../Svg/google';
+import GoogleIcon from '../../../Svg/google';
+import FacebookIcon from '../../../Svg/facebook';
 
 const SocialHandle = () => {
 	return (

@@ -1,5 +1,5 @@
 import React  from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import Card from './Card';
 import EmptyCart from '../../../../assets/emptyCart.gif';
@@ -7,6 +7,13 @@ import { Buttn } from '@/src/client/shared/Button';
 import 'react-toastify/dist/ReactToastify.css';
 import useCart from '@/src/client/shared/Context/useCart';
 
+type ProductProps = {
+	id: number;
+	name: string;
+	price: string;
+	quantity: number;
+	photo: StaticImageData;
+};
 
 const CardSection = () => {
   const {
@@ -28,7 +35,7 @@ const CardSection = () => {
 
 				<div className='mt-8 space-y-6'>
 					{product.length > 0 &&
-						product.map((value, index: number) => (
+						product.map((value: ProductProps, index: number) => (
 							<div key={index}>
 								<Card
 									{...value}

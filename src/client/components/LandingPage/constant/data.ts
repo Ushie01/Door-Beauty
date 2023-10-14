@@ -1,6 +1,6 @@
 import Bigen from './../../../../assets/Bigen Oz.jpg';
 import Clarol from './../../../../assets/Clarol Soy.jpg';
-import CreamBeauty from './../../../../assets/cream_beauty.jpg';
+import CreamBeauty from './../../../../assets/creamBeauty.jpg';
 import add from '../components/CosmeticsSection/assets/add.png'
 import abc from '../components/CosmeticsSection/assets/abc-store.png'
 import Tarry from '../components/CosmeticsSection/assets/erer.jpg';

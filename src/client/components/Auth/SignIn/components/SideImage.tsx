@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import LoginImg from '../../../../assets/LoginImg.jpg';
+import LoginImg from '../../../../../assets/LoginImg.jpg'
 
 const SideImage = () => {
   return (

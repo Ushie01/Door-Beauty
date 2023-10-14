@@ -7,7 +7,7 @@ import Image from 'next/image';
 import firstImage from './../../../../../assets/banOne.png';
 import secondImage from './../../../../../assets/banTwo.png';
 import { Tag } from '@/src/client/shared/Tag';
-import IntersectionComponent from '@/src/client/shared/IntersectionObserver';
+
 
 const CosmeticsSection = () => {
 	const renderCarouselItems = () => {

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
 import { PRODUCT_IMAGE } from '../../constant/data';
 import { ControlsPlus, ShopCart, GenericHeart } from '@heathmont/moon-icons-tw';
@@ -6,10 +6,18 @@ import { Button } from '@heathmont/moon-core-tw';
 import Heart from '../../../Svg/Heart';
 import useDeviceType from '@/src/client/shared/hooks/useDeviceType';
 import Counter from '@/src/client/shared/Counter';
-import CreamBeauty from './../../../../../assets/cream_beauty.jpg';
 import useCart from '@/src/client/shared/Context/useCart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+type ProductProps = {
+	id: number;
+	name: string;
+	price: string;
+	quantity: number;
+	photo: StaticImageData;
+};
+
 
 const ImageSection = () => {
 	const { isMobile } = useDeviceType();
@@ -20,17 +28,10 @@ const ImageSection = () => {
 	const { product, incrementCounter, decrementCounter, addToCart } = useCart();
 	const productData = {
 		id: 8,
-		// photo: CreamBeauty,
-		// name: 'Cream Beauty ',
-		// type: 'Cream',
-		// price: '$140.00',
-		// color: 'White',
 		quantity: 1,
 	};
-	const productQuantity = product && product.find((item) => item.id === productData.id);
-	// console.log(productQuantity.quantity)
+	const productQuantity = product && product.find((item: ProductProps) => item.id === productData.id);
 
-	// console.log(productData.quantity);
 	const handleAddToCart = (value: number) => {
 		addToCart(value);
 	};
