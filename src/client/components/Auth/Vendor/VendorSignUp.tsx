@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import DropdownImage from '@/src/client/shared/DropDown/DropdownImage';
 import { CARD_DATA_ARRAY } from '@/src/client/shared/Header/constants/data';
 import InputText from '@/src/client/shared/Input/InputText';
+import DropdownImage from '../../../shared/DropDown/DropdownImage';
 
 const VendorSignUp = () => {
 	const [agreeTerms, setAgreeTerms] = useState(false);
