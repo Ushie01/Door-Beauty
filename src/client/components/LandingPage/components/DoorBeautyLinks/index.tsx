@@ -4,6 +4,7 @@ import Card from './Card';
 import { Tag } from '@/src/client/shared/Tag';
 import IntersectionComponent from '@/src/client/shared/IntersectionObserver';
 
+
 const DoorBeautyLinks = () => {
 	return (
 		<IntersectionComponent
@@ -29,6 +30,7 @@ const DoorBeautyLinks = () => {
 										/>
 									}
 									modalTitle={val.modalTitle}
+									index={index}
 								/>
 							</div>
 						))}

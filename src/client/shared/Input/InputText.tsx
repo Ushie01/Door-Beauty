@@ -10,7 +10,7 @@ type Props = {
 const InputText = ({label, name, type, autoComplete}: Props) => {
   return (
 		<div>
-          <label className='block text-sm font-medium leading-6 text-gray-900'>
+          <label className='block mt-6 text-sm font-medium leading-6 text-gray-900'>
               {label}
 			</label>
 			<div className='mt-2'>

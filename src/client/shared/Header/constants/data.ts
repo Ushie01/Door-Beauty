@@ -1,4 +1,8 @@
-
+import English from '../../../../assets/us.png';
+import Spain from '../../../../assets/spain.png';
+import Master from '../../../../assets/master-logo.png';
+import Paypal from '../../../../assets/payment.png';
+import Visa from '../../../../assets/visa.png';
 
 export const DATA: { id: string, name: string; data?: { name: string }[] }[] = [
   { id: '1', name: 'HOME' },
@@ -37,3 +41,14 @@ export const people: {name: string}[] = [
 	{ name: 'Tanya Fox' },
 	{ name: 'Hellen Schmidt' },
 ];
+
+export const FLAG_DATA_ARRAY = [
+		{ name: 'English', image: English },
+		{ name: 'Spain', image: Spain }
+	]
+
+export const CARD_DATA_ARRAY = [
+    {name: 'Master Card',  image: Master},
+    {name: 'Paypal', image: Paypal},
+    {name: 'Visa Card', image: Visa}
+  ]

@@ -6,7 +6,7 @@ import SeasonSection from './components/SeasonSection';
 import Location from './components/Location';
 import CarouselItem from './components/Carousel/ProductCarousel';
 import CosmeticsSection from './components/CosmeticsSection/CosmeticsSection';
-import DoorBeautyLinks from './components/DoorBeautyLinks/DoorBeautyLinks';
+import DoorBeautyLinks from './components/DoorBeautyLinks';
 import Footer from '../../shared/Footer';
 import Container from './container/container';
 

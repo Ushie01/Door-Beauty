@@ -24,7 +24,7 @@ const Form = () => {
 			/>
 
 			<InputText
-				label='lastName'
+				label='	Last Name'
 				name='lastName'
 				type='text'
 				autoComplete='text'

@@ -29,27 +29,27 @@ const CosmeticsSection = () => {
 				<CustomCarousel renderCarouselItems={renderCarouselItems} />
 			</div>
 			<div className='flex lg:flex-row flex-col items-center justify-between lg:mt-40 mt-10 w-full'>
-				<IntersectionComponent
-					intersection={
+				{/* <IntersectionComponent
+					intersection={ */}
 						<Image
 							src={firstImage}
 							alt='firstImage'
-							className='lg:pr-2'
+							className='lg:pr-2 lg:w-1/2 w-0'
 						/>
-					}
-					verticalTransition='translate-y-[-200px]'
-				/>
+					{/* }
+					verticalTransition='translate-x-[100px]'
+				/> */}
 
-				<IntersectionComponent
-					intersection={
+				{/* <IntersectionComponent
+					intersection={ */}
 						<Image
 							src={secondImage}
 							alt='firstImage'
-							className='lg:pl-2 lg:pt-0 pt-7'
+							className='lg:pl-2 lg:pt-0 pt-7 lg:w-1/2 w-0'
 						/>
-					}
-					verticalTransition='translate-y-[200px]'
-				/>
+					{/* }
+					verticalTransition='translate-x-[-100px]'
+				/> */}
 			</div>
 			<hr className='mt-20 w-full' />
 		</div>

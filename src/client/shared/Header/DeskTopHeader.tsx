@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import Logo from './../../../assets/logo.png';
 import Image from 'next/image';
 import SearchInput from '../Input/SearchInput';
@@ -6,9 +6,10 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
-import FlagDropDown from '../DropDown/FlagDropdown';
+import DropDownImage from '../DropDown/DropdownImage';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
 import useCart from '../Context/useCart';
+import { FLAG_DATA_ARRAY } from './constants/data';
 
 const DeskTopHeader = () => {
 	const { product } = useCart();
@@ -53,7 +54,7 @@ const DeskTopHeader = () => {
 							<p>WishList</p>
 						</div>
 						<div className='flex items-center justify-center space-x-2'>
-							<FlagDropDown />
+							<DropDownImage arrayData={FLAG_DATA_ARRAY} />
 						</div>
 					</div>
 				</div>

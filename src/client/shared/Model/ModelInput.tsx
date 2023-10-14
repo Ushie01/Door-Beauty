@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import { Modal, Button, IconButton } from '@heathmont/moon-core-tw';
 import { ArrowsRight, ControlsCloseSmall } from '@heathmont/moon-icons-tw';
-import Form from '../../components/Auth/SignIn/components/Form';
+import { RenderComponent } from '../../components/LandingPage/components/DoorBeautyLinks/RenderComponent';
 
-type Props = {
+
+const ModelInput = ({
+	modalTitle,
+	index,
+}: {
 	modalTitle: string;
-	// index: string;
-};
-
-const ModelInput = ({ modalTitle }: Props) => {
+	index: number;
+}) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const closeModal = () => setIsOpen(false);
 	const openModal = () => setIsOpen(true);
+
 	return (
 		<>
 			<Button
@@ -23,11 +26,12 @@ const ModelInput = ({ modalTitle }: Props) => {
 					color='white'
 				/>
 			</Button>
+
 			<Modal
 				open={isOpen}
 				onClose={closeModal}>
 				<Modal.Backdrop className='bg-black opacity-40' />
-				<Modal.Panel className='bg-white border'>
+				<Modal.Panel className='bg-white border w-[1200px]'>
 					<div className='border-b-[0.063rem] border-beerus pt-5 pb-4 px-6 relative'>
 						<h3 className='text-moon-18 text-bulma font-medium'>
 							{modalTitle}
@@ -41,11 +45,7 @@ const ModelInput = ({ modalTitle }: Props) => {
 						</IconButton>
 					</div>
 
-					<div className='p-4'>
-						<Form />
-					</div>
-
-
+					<RenderComponent index={index} />
 
 					<div className='flex flex-col w-full space-y-4 p-4'>
 						<Button

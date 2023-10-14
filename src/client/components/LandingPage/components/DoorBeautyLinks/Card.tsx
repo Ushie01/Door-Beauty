@@ -7,9 +7,10 @@ type Props = {
 	description: string;
 	icon: ReactNode;
 	modalTitle: string;
+	index: number;
 };
 
-const Card = ({ title, description, icon, modalTitle }: Props) => {
+const Card = ({ title, description, icon, modalTitle, index }: Props) => {
 	return (
 		<div className='flex items-start justify-center h-max px-5'>
 			<div className='h-24 p-2 lg:pt-0 pt-16'>{icon}</div>
@@ -17,7 +18,7 @@ const Card = ({ title, description, icon, modalTitle }: Props) => {
 				<p className='text-xl font-bold'>{title}</p>
 				<p>
 					{description}
-					<ModelInput modalTitle={modalTitle} />
+					<ModelInput modalTitle={modalTitle} index={index} />
 				</p>
 			</div>
 		</div>
