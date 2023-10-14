@@ -11,7 +11,7 @@ type DropDownProps = {
 	arrayData: Data[];
 }
 
-const DropDownImage: React.FC<DropDownProps> = ({ arrayData }) => {
+const DropdownImage: React.FC<DropDownProps> = ({ arrayData }) => {
 	const [option, setOption] = useState<Data | null>(null);
 
 	return (
@@ -66,4 +66,4 @@ const DropDownImage: React.FC<DropDownProps> = ({ arrayData }) => {
 	);
 };
 
-export default DropDownImage;
+export default DropdownImage;

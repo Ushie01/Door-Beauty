@@ -59,9 +59,7 @@ const DriverSignUp = () => {
 				type='text'
 				autoComplete='tex'
 			/>
-			{/* <div className='border rounded-xl mt-5'>
-				<DropDownImage arrayData={CARD_DATA_ARRAY} />
-			</div> */}
+
 		</div>
 	);
 };

@@ -7,13 +7,12 @@ import Image from 'next/image';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
 import SearchInput from '../Input/SearchInput';
-import FlagDropDown from '../DropDown/DropdownImage';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import DropDown from '../DropDown';
 import { DATA, FLAG_DATA_ARRAY } from './constants/data';
 import useCart from '../Context/useCart';
-import DropDownImage from '../DropDown/DropdownImage';
+import DropdownImage from '../DropDown/DropdownImage';
 
 type Data = {
 	id: string;
@@ -48,7 +47,7 @@ const MobileHeader = () => {
 					setOpen={setIsOpen}>
 					<Drawer.Panel className='bg-white border-r-2'>
 						<div className='flex justify-between items-center p-3 border-b border-trunks'>
-							<DropDownImage arrayData={FLAG_DATA_ARRAY} />
+							<DropdownImage arrayData={FLAG_DATA_ARRAY} />
 							<div className='flex '>
 								<IconButton
 									variant='ghost'

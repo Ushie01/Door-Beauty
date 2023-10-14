@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DropDownImage from '@/src/client/shared/DropDown/DropdownImage';
+import DropdownImage from '@/src/client/shared/DropDown/DropdownImage';
 import { CARD_DATA_ARRAY } from '@/src/client/shared/Header/constants/data';
 import InputText from '@/src/client/shared/Input/InputText';
 
@@ -90,7 +90,7 @@ const VendorSignUp = () => {
 
 			<p className='mt-5'>Prepaid Card</p>
 			<div className='border rounded-xl mt-1'>
-				<DropDownImage arrayData={CARD_DATA_ARRAY} />
+				<DropdownImage arrayData={CARD_DATA_ARRAY} />
 			</div>
 
 			<div className='form-check mt-3'>
