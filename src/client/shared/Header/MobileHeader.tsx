@@ -9,10 +9,10 @@ import Link from 'next/link';
 import SearchInput from '../Input/SearchInput';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
-import DropdownText from '../Dropdown/Dropdown';
 import { DATA, FLAG_DATA_ARRAY } from './constants/data';
 import useCart from '../Context/useCart';
 import DropdownImage from '../Dropdown/DropdownImage';
+import DropdownText from '../Dropdown/Dropdown';
 
 type Data = {
 	id: string;
