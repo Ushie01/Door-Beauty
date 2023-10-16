@@ -44,11 +44,11 @@ const useModalConfirmation = () => {
 								Are sure you want to delete this item from cart!!
 							</h3>
 						</div>
-          </div>
-          
+					</div>
+
 					<hr className='w-full border' />
-					
-          <div className='flex flex-col p-4 items-center justify-center '>
+
+					<div className='flex flex-col p-4 items-center justify-center '>
 						<Button
 							variant='outline'
 							className='text-white w-full bg-orange-500 rounded-xl'

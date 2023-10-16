@@ -4,6 +4,7 @@ import Master from '../../../../assets/master-logo.png';
 import Paypal from '../../../../assets/payment.png';
 import Visa from '../../../../assets/visa.png';
 
+
 export const DATA: { id: string, name: string; data?: { name: string }[] }[] = [
   { id: '1', name: 'HOME' },
   { id: '2', name: 'STORES' },

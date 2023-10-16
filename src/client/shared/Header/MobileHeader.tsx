@@ -9,7 +9,7 @@ import Link from 'next/link';
 import SearchInput from '../Input/SearchInput';
 import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
-import DropdownText from '../Dropdown';
+import DropdownText from '../Dropdown/Dropdown';
 import { DATA, FLAG_DATA_ARRAY } from './constants/data';
 import useCart from '../Context/useCart';
 import DropdownImage from '../Dropdown/DropdownImage';
@@ -116,6 +116,7 @@ const MobileHeader = () => {
 					alt='Logo'
 					className='w-14 h-20'
 				/>
+
 				<Link
 					href='/cart'
 					className=' flex items-center justify-center space-x-2'>
