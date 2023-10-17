@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Card from "./card";
-import Headerdash from "./headerdash";
-import Navbar from "./navbar";
-import Salescard from "./salescard";
-import LineChart from "./linechart";
+import Card from "../components/card";
+import Headerdash from "../components/headerdash";
+import Navbar from "../components/navbar";
+import Salescard from "../components/salescard";
+import LineChart from "../components/linechart";
 
 const Admin = () => {
   return (

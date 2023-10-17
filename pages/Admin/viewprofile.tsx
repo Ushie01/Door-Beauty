@@ -1,5 +1,5 @@
 import React from 'react';
-import Viewprofile from '@/src/client/components/Auth/Admin/viewprofile';
+import Viewprofile from '@/src/client/components/Auth/Admin/Profile/viewprofile';
 
 const AdminPage: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
-import Headerdash from "./headerdash";
-import Navbar from "./navbar";
+import Headerdash from "../components/headerdash";
+import Navbar from "../components/navbar";
 import Image from "next/image";
 
 const Viewprofile = () => {

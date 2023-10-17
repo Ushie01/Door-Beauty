@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useTable, Column, CellProps, usePagination, Row } from "react-table";
 import { useState } from "react";
-import Viewtab from "./viewtab";
-import Headerdash from "./headerdash";
-import Navbar from "./navbar";
-import data from './MOCK_DATA.json'
+import Viewtab from "../components/viewtab";
+import Headerdash from "../components/headerdash";
+import Navbar from "../components/navbar";
+import data from '../MOCK_DATA.json'
 
 interface TabViewRows {
   [key: string]: boolean;

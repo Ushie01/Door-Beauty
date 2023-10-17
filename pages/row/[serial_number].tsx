@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import mockdata from "@/src/client/components/Auth/Admin/MOCK_DATA.json";
-import Headerdash from "@/src/client/components/Auth/Admin/headerdash";
-import Navbar from "@/src/client/components/Auth/Admin/navbar";
+import Headerdash from "@/src/client/components/Auth/Admin/components/headerdash";
+import Navbar from "@/src/client/components/Auth/Admin/components/navbar";
 
 const RowDetail = () => {
   const router = useRouter();
