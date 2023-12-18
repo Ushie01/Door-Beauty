@@ -6,10 +6,10 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import Cart from '../../components/Svg/Cart';
 import Link from 'next/link';
-import DropdownImage from '../Dropdown/DropdownImage';
 import ToggleNavbar from './ToggleNavbar/ToggleNavbar';
 import useCart from '../Context/useCart';
 import { FLAG_DATA_ARRAY } from './constants/data';
+import DropdownImg from '../DropDown/DropDownImage/DropdownImage';
 
 const DeskTopHeader = () => {
 	const { product } = useCart();
@@ -54,7 +54,7 @@ const DeskTopHeader = () => {
 							<p>WishList</p>
 						</div>
 						<div className='flex items-center justify-center space-x-2'>
-							<DropdownImage arrayData={FLAG_DATA_ARRAY} />
+							<DropdownImg arrayData={FLAG_DATA_ARRAY} />
 						</div>
 					</div>
 				</div>

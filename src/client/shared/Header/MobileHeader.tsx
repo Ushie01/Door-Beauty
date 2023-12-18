@@ -11,8 +11,8 @@ import Avatar from '../../components/Svg/Avatar';
 import Heart from '../../components/Svg/Heart';
 import { DATA, FLAG_DATA_ARRAY } from './constants/data';
 import useCart from '../Context/useCart';
-import DropdownImage from '../Dropdown/DropdownImage';
-import DropdownText from '../Dropdown/Dropdown';
+import DropdownImg from '../DropDown/DropDownImage/DropdownImage';
+import DropdownText from '../DropDown';
 
 type Data = {
 	id: string;
@@ -47,7 +47,7 @@ const MobileHeader = () => {
 					setOpen={setIsOpen}>
 					<Drawer.Panel className='bg-white border-r-2'>
 						<div className='flex justify-between items-center p-3 border-b border-trunks'>
-							<DropdownImage arrayData={FLAG_DATA_ARRAY} />
+							<DropdownImg arrayData={FLAG_DATA_ARRAY} />
 							<div className='flex '>
 								<IconButton
 									variant='ghost'
@@ -77,7 +77,9 @@ const MobileHeader = () => {
 									width='17'
 									height='17'
 								/>
-								<p className='text-md font-semibold'>WishList</p>
+								<p className='text-md font-semibold'>
+									WishList
+								</p>
 							</Link>
 						</div>
 
@@ -101,7 +103,9 @@ const MobileHeader = () => {
 										)
 									) : (
 										<div className='flex flex-col space-y-4 mt-4'>
-											<p className='text-md px-4'>{value.name}</p>
+											<p className='text-md px-4'>
+												{value.name}
+											</p>
 											<hr className='w-full' />
 										</div>
 									)}

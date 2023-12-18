@@ -2,14 +2,6 @@ import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
 import Link from 'next/link';
 
-
-type TitleProps = {
-	title: string;
-	arrayTitle: { name: string }[];
-	setLink: Dispatch<SetStateAction<string | []>>;
-};
-
-
 const DropdownText = ({ title, arrayTitle, setLink }: TitleProps) => {
 	const [option, setOption] = useState<{ name: string } | null>(null);
 	const handleOptionSelect = (selectedLink: { name: string }) => {
@@ -60,3 +52,10 @@ const DropdownText = ({ title, arrayTitle, setLink }: TitleProps) => {
 };
 
 export default DropdownText;
+
+
+type TitleProps = {
+	title: string;
+	arrayTitle: { name: string }[];
+	setLink: Dispatch<SetStateAction<string | []>>;
+};

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CARD_DATA_ARRAY } from '@/src/client/shared/Header/constants/data';
 import InputText from '@/src/client/shared/Input/InputText';
-import DropdownImage from '../../../shared/Dropdown/DropdownImage';
+import DropdownImg from '@/src/client/shared/DropDown/DropDownImage/DropdownImage';
 
 const VendorSignUp = () => {
 	const [agreeTerms, setAgreeTerms] = useState(false);
@@ -90,7 +90,7 @@ const VendorSignUp = () => {
 
 			<p className='mt-5'>Prepaid Card</p>
 			<div className='border rounded-xl mt-1'>
-				<DropdownImage arrayData={CARD_DATA_ARRAY} />
+				<DropdownImg arrayData={CARD_DATA_ARRAY} />
 			</div>
 
 			<div className='form-check mt-3'>

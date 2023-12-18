@@ -2,16 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
 import Image, { StaticImageData } from 'next/image';
 
-type Data = {
-	name: string;
-	image: StaticImageData;
-};
-
-type DropDownProps = {
-	arrayData: Data[];
-}
-
-const DropdownImage: React.FC<DropDownProps> = ({ arrayData }) => {
+const DropdownImg: React.FC<DropDownProps> = ({ arrayData }) => {
 	const [option, setOption] = useState<Data | null>(null);
 
 	return (
@@ -66,4 +57,12 @@ const DropdownImage: React.FC<DropDownProps> = ({ arrayData }) => {
 	);
 };
 
-export default DropdownImage;
+export default DropdownImg;
+type Data = {
+	name: string;
+	image: StaticImageData;
+};
+
+type DropDownProps = {
+	arrayData: Data[];
+};
